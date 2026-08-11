@@ -28,8 +28,8 @@
 </string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="4" column="0">
-    <widget class="QLabel" name="ContinueGame">
+   <item row="7" column="1">
+    <widget class="QLabel" name="Exit">
      <property name="font">
       <font>
        <family>Maple Mono NL CN</family>
@@ -37,19 +37,19 @@
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel#ContinueGame {
+      <string notr="true">QLabel#Exit {
     color: White;
     font-size: 32px;
 }
 </string>
      </property>
      <property name="text">
-      <string>  继续游戏</string>
+      <string>退出</string>
      </property>
     </widget>
    </item>
-   <item row="7" column="0">
-    <widget class="QLabel" name="SeparatorLine2">
+   <item row="2" column="1">
+    <widget class="QLabel" name="SeparatorLine1">
      <property name="font">
       <font>
        <family>Maple Mono NL CN</family>
@@ -57,18 +57,18 @@
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel#SeparatorLine2 {
+      <string notr="true">QLabel#SeparatorLine1 {
 	background-color: rgba(255, 255, 255, 0);
     font-size: 9px;
 }
 </string>
      </property>
      <property name="text">
-      <string>分割线</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="0">
+   <item row="1" column="1">
     <widget class="QLabel" name="GameTitle">
      <property name="font">
       <font>
@@ -84,14 +84,60 @@
 </string>
      </property>
      <property name="text">
-      <string> HatPuter的C++教学</string>
+      <string>HatPuter的C++教学</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
      </property>
     </widget>
    </item>
-   <item row="0" column="0">
+   <item row="3" column="1">
+    <widget class="QLabel" name="StartGame">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#StartGame {
+    color: White;
+    font-size: 32px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>开始游戏</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLabel" name="Settings">
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#Settings {
+    color: White;
+    font-size: 32px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>设置</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
     <widget class="QLabel" name="SeparatorLine3">
      <property name="font">
       <font>
@@ -111,8 +157,8 @@
      </property>
     </widget>
    </item>
-   <item row="5" column="0">
-    <widget class="QLabel" name="Setting">
+   <item row="8" column="1">
+    <widget class="QLabel" name="SeparatorLine2">
      <property name="font">
       <font>
        <family>Maple Mono NL CN</family>
@@ -120,74 +166,60 @@
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel#Setting {
-    color: White;
-    font-size: 32px;
-}
-</string>
-     </property>
-     <property name="text">
-      <string>  设置</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="0">
-    <widget class="QLabel" name="StartGame">
-     <property name="font">
-      <font>
-       <family>Maple Mono NL CN</family>
-       <pointsize>-1</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel#StartGame {
-    color: White;
-    font-size: 32px;
-}
-</string>
-     </property>
-     <property name="text">
-      <string>  开始游戏</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="0">
-    <widget class="QLabel" name="Exit">
-     <property name="font">
-      <font>
-       <family>Maple Mono NL CN</family>
-       <pointsize>-1</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel#Exit {
-    color: White;
-    font-size: 32px;
-}
-</string>
-     </property>
-     <property name="text">
-      <string>  退出</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="0">
-    <widget class="QLabel" name="SeparatorLine1">
-     <property name="font">
-      <font>
-       <family>Maple Mono NL CN</family>
-       <pointsize>-1</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel#SeparatorLine1 {
+      <string notr="true">QLabel#SeparatorLine2 {
 	background-color: rgba(255, 255, 255, 0);
     font-size: 9px;
 }
 </string>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>分割线</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLabel" name="ContinueGame">
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#ContinueGame {
+    color: White;
+    font-size: 32px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>继续游戏</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="SeparatorLine4">
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#SeparatorLine4 {
+	background-color: rgba(255, 255, 255, 0);
+    font-size: 9px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>分割线</string>
      </property>
     </widget>
    </item>

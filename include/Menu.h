@@ -27,7 +27,16 @@ protected:
 private:
     Ui::Menu *ui;
 
-    int menuOptions; // 菜单选项
+    // 菜单选项
+    enum class MenuOptions {
+        Null = 0,
+        StartGame,
+        ContinueGame,
+        Settings,
+        Exit
+    };
+
+    MenuOptions m_menuOptions; // 菜单选项
 };
 
 #endif // MENU_H

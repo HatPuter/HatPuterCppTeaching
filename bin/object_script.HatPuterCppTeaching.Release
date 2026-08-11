@@ -3,9 +3,12 @@ release/Animation.o
 release/Attention.o
 release/Creator.o
 release/GameMain.o
+release/MenuOptions.o
+release/UserData.o
 release/main.o
 release/qrc_qmake_qmake_qm_files.o
 release/moc_Menu.o
 release/moc_Attention.o
 release/moc_Creator.o
 release/moc_GameMain.o
+release/moc_UserData.o

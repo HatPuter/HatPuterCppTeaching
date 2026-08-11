@@ -12,6 +12,7 @@ SOURCES += \
     src/Attention.cpp \
     src/Creator.cpp \
     src/GameMain.cpp \
+    src/MenuOptions.cpp \
     src/UserData.cpp \
     src/main.cpp
 
