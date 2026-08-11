@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Menu</class>
+ <widget class="QWidget" name="Menu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Maple Mono NL CN</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>HatPuter的C++教学</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#Menu {
+    background-color: Black;
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="4" column="0">
+    <widget class="QLabel" name="ContinueGame">
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#ContinueGame {
+    color: White;
+    font-size: 32px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>  继续游戏</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="SeparatorLine2">
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#SeparatorLine2 {
+	background-color: rgba(255, 255, 255, 0);
+    font-size: 9px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>分割线</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="GameTitle">
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#GameTitle {
+    color: White;
+    font-size: 64px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string> HatPuter的C++教学</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="SeparatorLine3">
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#SeparatorLine3 {
+	background-color: rgba(255, 255, 255, 0);
+    font-size: 9px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>分割线</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="Setting">
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#Setting {
+    color: White;
+    font-size: 32px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>  设置</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="StartGame">
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#StartGame {
+    color: White;
+    font-size: 32px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>  开始游戏</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="Exit">
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#Exit {
+    color: White;
+    font-size: 32px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>  退出</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="SeparatorLine1">
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#SeparatorLine1 {
+	background-color: rgba(255, 255, 255, 0);
+    font-size: 9px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;分割线&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

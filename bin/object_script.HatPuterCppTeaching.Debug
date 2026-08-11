@@ -1,0 +1,11 @@
+debug/Menu.o
+debug/Animation.o
+debug/Attention.o
+debug/Creator.o
+debug/GameMain.o
+debug/main.o
+debug/qrc_qmake_qmake_qm_files.o
+debug/moc_Menu.o
+debug/moc_Attention.o
+debug/moc_Creator.o
+debug/moc_GameMain.o

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Creator</class>
+ <widget class="QWidget" name="Creator">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <family>Maple Mono NL CN</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>HatPuter的C++教学</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#Creator {
+    background-color: Black;
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="SeparatorLine3">
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#SeparatorLine3 {
+	background-color: rgba(255, 255, 255, 0);
+    font-size: 9px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>分割线分割线分割线分割线分割线</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QLabel" name="SeparatorLine1">
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#SeparatorLine1 {
+	background-color: rgba(255, 255, 255, 0);
+    font-size: 9px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>分割线分割线分割线分割线分割线分割线</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLabel" name="CreatorAvatar">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#CreatorAvatar {
+    color: White;
+    font-size: 50px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>头像</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="5">
+    <widget class="QLabel" name="SeparatorLine2">
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#SeparatorLine2 {
+	background-color: rgba(255, 255, 255, 0);
+    font-size: 9px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>分割线分割线分割线分割线分割线</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QLabel" name="CreatorName">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#CreatorName {
+    color: White;
+    font-size: 50px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Bilibili HatPuter</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

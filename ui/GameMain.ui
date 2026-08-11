@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GameMain</class>
+ <widget class="QWidget" name="GameMain">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Maple Mono NL CN</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>HatPuter的C++教学</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#GameMain {
+    background-color: Black;
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
