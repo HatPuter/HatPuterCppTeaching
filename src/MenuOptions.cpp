@@ -21,8 +21,6 @@ void Menu::keyPressEvent(QKeyEvent *event)
         case MenuOptions::Exit:
             m_menuOptions = MenuOptions::Settings;
             break;
-        case MenuOptions::Null:
-            break;
         }
     }
     // 下键
@@ -40,8 +38,6 @@ void Menu::keyPressEvent(QKeyEvent *event)
         case MenuOptions::Exit:
             m_menuOptions = MenuOptions::StartGame;
             break;
-        case MenuOptions::Null:
-            break;
         }
     }
     // 回车确认键
@@ -55,8 +51,6 @@ void Menu::keyPressEvent(QKeyEvent *event)
             break;
         case MenuOptions::Exit:
             QApplication::quit();
-            break;
-        case MenuOptions::Null:
             break;
         }
     }
@@ -81,16 +75,7 @@ bool Menu::eventFilter(QObject* object, QEvent* event)
         else if (object == ui->Exit) {
             m_menuOptions = MenuOptions::Exit;
         }
-        else {
-            m_menuOptions = MenuOptions::Null;
-        }
 
-        DisplayOptions();
-    }
-
-    // 离开
-    if (event->type() == QEvent::Leave) {
-        m_menuOptions = MenuOptions::Null;
         DisplayOptions();
     }
 
@@ -107,8 +92,6 @@ bool Menu::eventFilter(QObject* object, QEvent* event)
                 break;
             case MenuOptions::Exit:
                 QApplication::quit();
-                break;
-            case MenuOptions::Null:
                 break;
             }
         }
@@ -144,12 +127,6 @@ void Menu::DisplayOptions()
         ui->ContinueGame->setStyleSheet("QLabel#ContinueGame {color: White; font-size: 32px;}");
         ui->Settings->setStyleSheet("QLabel#Settings {color: White; font-size: 32px;}");
         ui->Exit->setStyleSheet("QLabel#Exit {color: Yellow; font-size: 32px;}");
-        break;
-    case MenuOptions::Null:
-        ui->StartGame->setStyleSheet("QLabel#StartGame {color: White; font-size: 32px;}");
-        ui->ContinueGame->setStyleSheet("QLabel#ContinueGame {color: White; font-size: 32px;}");
-        ui->Settings->setStyleSheet("QLabel#Settings {color: White; font-size: 32px;}");
-        ui->Exit->setStyleSheet("QLabel#Exit {color: White; font-size: 32px;}");
         break;
     }
 }

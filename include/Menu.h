@@ -29,8 +29,7 @@ private:
 
     // 菜单选项
     enum class MenuOptions {
-        Null = 0,
-        StartGame,
+        StartGame = 1,
         ContinueGame,
         Settings,
         Exit
