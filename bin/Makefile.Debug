@@ -863,7 +863,25 @@ debug/Menu.o: ../src/Menu.cpp ../include/Menu.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QLabel \
 		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
-		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qframe.h
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qframe.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QListView \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlistview.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractitemview.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qitemselectionmodel.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qstyleoption.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractspinbox.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qvalidator.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qregularexpression.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qicon.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qslider.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractslider.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qstyle.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qtabbar.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qrubberband.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\Menu.o ..\src\Menu.cpp
 
 debug/Animation.o: ../src/Animation.cpp ../include/Animation.h \
@@ -1503,6 +1521,24 @@ debug/MenuOptions.o: ../src/MenuOptions.cpp ../include/Menu.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QLabel \
 		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qframe.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QListView \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlistview.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractitemview.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qitemselectionmodel.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qstyleoption.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractspinbox.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qvalidator.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qregularexpression.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qicon.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qslider.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractslider.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qstyle.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qtabbar.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qrubberband.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtGui/QkeyEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\MenuOptions.o ..\src\MenuOptions.cpp
 
