@@ -22,22 +22,23 @@ class Ui_Menu
 {
 public:
     QGridLayout *gridLayout;
-    QLabel *GameTitle;
+    QLabel *SeparatorLine2;
+    QLabel *SeparatorLine5;
     QLabel *SeparatorLine1;
-    QLabel *SeparatorLine4;
-    QListView *SeparatorLine4_2;
     QGridLayout *MenuOptions;
     QLabel *StartGame;
     QLabel *ContinueGame;
-    QLabel *label_2;
+    QLabel *SeparatorLine7;
     QLabel *Exit;
     QLabel *Settings;
-    QLabel *label;
-    QLabel *label_3;
+    QLabel *SeparatorLine8;
+    QLabel *SeparatorLine9;
     QLabel *SeparatorLine6;
+    QLabel *SeparatorLine4;
     QLabel *SeparatorLine3;
-    QLabel *SeparatorLine2;
-    QLabel *SeparatorLine5;
+    QLabel *GameTitle;
+    QListView *BulletinsBoard;
+    QLabel *BulletinsBoardTitle;
 
     void setupUi(QWidget *Menu)
     {
@@ -54,17 +55,27 @@ public:
 ""));
         gridLayout = new QGridLayout(Menu);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        GameTitle = new QLabel(Menu);
-        GameTitle->setObjectName(QString::fromUtf8("GameTitle"));
-        GameTitle->setFont(font);
-        GameTitle->setStyleSheet(QString::fromUtf8("QLabel#GameTitle {\n"
-"    color: White;\n"
-"    font-size: 64px;\n"
+        SeparatorLine2 = new QLabel(Menu);
+        SeparatorLine2->setObjectName(QString::fromUtf8("SeparatorLine2"));
+        SeparatorLine2->setFont(font);
+        SeparatorLine2->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine2 {\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"    font-size: 9px;\n"
 "}\n"
 ""));
-        GameTitle->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
-        gridLayout->addWidget(GameTitle, 1, 2, 1, 1);
+        gridLayout->addWidget(SeparatorLine2, 8, 2, 1, 3);
+
+        SeparatorLine5 = new QLabel(Menu);
+        SeparatorLine5->setObjectName(QString::fromUtf8("SeparatorLine5"));
+        SeparatorLine5->setFont(font);
+        SeparatorLine5->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine5 {\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"    font-size: 9px;\n"
+"}\n"
+""));
+
+        gridLayout->addWidget(SeparatorLine5, 0, 6, 9, 1);
 
         SeparatorLine1 = new QLabel(Menu);
         SeparatorLine1->setObjectName(QString::fromUtf8("SeparatorLine1"));
@@ -75,24 +86,7 @@ public:
 "}\n"
 ""));
 
-        gridLayout->addWidget(SeparatorLine1, 2, 2, 1, 1);
-
-        SeparatorLine4 = new QLabel(Menu);
-        SeparatorLine4->setObjectName(QString::fromUtf8("SeparatorLine4"));
-        SeparatorLine4->setMaximumSize(QSize(16777215, 16777215));
-        SeparatorLine4->setFont(font);
-        SeparatorLine4->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine4 {\n"
-"	background-color: rgba(255, 255, 255, 0);\n"
-"    font-size: 9px;\n"
-"}\n"
-""));
-
-        gridLayout->addWidget(SeparatorLine4, 0, 0, 8, 1);
-
-        SeparatorLine4_2 = new QListView(Menu);
-        SeparatorLine4_2->setObjectName(QString::fromUtf8("SeparatorLine4_2"));
-
-        gridLayout->addWidget(SeparatorLine4_2, 2, 4, 5, 1);
+        gridLayout->addWidget(SeparatorLine1, 3, 2, 1, 1);
 
         MenuOptions = new QGridLayout();
         MenuOptions->setObjectName(QString::fromUtf8("MenuOptions"));
@@ -119,10 +113,16 @@ public:
 
         MenuOptions->addWidget(ContinueGame, 1, 0, 1, 1);
 
-        label_2 = new QLabel(Menu);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        SeparatorLine7 = new QLabel(Menu);
+        SeparatorLine7->setObjectName(QString::fromUtf8("SeparatorLine7"));
+        SeparatorLine7->setFont(font);
+        SeparatorLine7->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine7 {\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"    font-size: 9px;\n"
+"}\n"
+""));
 
-        MenuOptions->addWidget(label_2, 0, 3, 1, 1);
+        MenuOptions->addWidget(SeparatorLine7, 0, 3, 1, 1);
 
         Exit = new QLabel(Menu);
         Exit->setObjectName(QString::fromUtf8("Exit"));
@@ -146,21 +146,38 @@ public:
 
         MenuOptions->addWidget(Settings, 2, 0, 1, 1);
 
-        label = new QLabel(Menu);
-        label->setObjectName(QString::fromUtf8("label"));
+        SeparatorLine8 = new QLabel(Menu);
+        SeparatorLine8->setObjectName(QString::fromUtf8("SeparatorLine8"));
+        SeparatorLine8->setFont(font);
+        SeparatorLine8->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine8 {\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"    font-size: 9px;\n"
+"}\n"
+""));
 
-        MenuOptions->addWidget(label, 1, 2, 1, 1);
+        MenuOptions->addWidget(SeparatorLine8, 1, 2, 1, 1);
 
-        label_3 = new QLabel(Menu);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
+        SeparatorLine9 = new QLabel(Menu);
+        SeparatorLine9->setObjectName(QString::fromUtf8("SeparatorLine9"));
+        SeparatorLine9->setFont(font);
+        SeparatorLine9->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine9 {\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"    font-size: 9px;\n"
+"}\n"
+""));
 
-        MenuOptions->addWidget(label_3, 2, 1, 2, 1);
+        MenuOptions->addWidget(SeparatorLine9, 2, 1, 2, 1);
 
 
-        gridLayout->addLayout(MenuOptions, 3, 2, 4, 1);
+        gridLayout->addLayout(MenuOptions, 4, 2, 4, 1);
 
         SeparatorLine6 = new QLabel(Menu);
         SeparatorLine6->setObjectName(QString::fromUtf8("SeparatorLine6"));
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(SeparatorLine6->sizePolicy().hasHeightForWidth());
+        SeparatorLine6->setSizePolicy(sizePolicy);
         SeparatorLine6->setFont(font);
         SeparatorLine6->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine6 {\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
@@ -168,7 +185,19 @@ public:
 "}\n"
 ""));
 
-        gridLayout->addWidget(SeparatorLine6, 1, 3, 6, 1);
+        gridLayout->addWidget(SeparatorLine6, 1, 3, 7, 1);
+
+        SeparatorLine4 = new QLabel(Menu);
+        SeparatorLine4->setObjectName(QString::fromUtf8("SeparatorLine4"));
+        SeparatorLine4->setMaximumSize(QSize(16777215, 16777215));
+        SeparatorLine4->setFont(font);
+        SeparatorLine4->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine4 {\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"    font-size: 9px;\n"
+"}\n"
+""));
+
+        gridLayout->addWidget(SeparatorLine4, 0, 0, 9, 1);
 
         SeparatorLine3 = new QLabel(Menu);
         SeparatorLine3->setObjectName(QString::fromUtf8("SeparatorLine3"));
@@ -181,27 +210,42 @@ public:
 
         gridLayout->addWidget(SeparatorLine3, 0, 2, 1, 3);
 
-        SeparatorLine2 = new QLabel(Menu);
-        SeparatorLine2->setObjectName(QString::fromUtf8("SeparatorLine2"));
-        SeparatorLine2->setFont(font);
-        SeparatorLine2->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine2 {\n"
-"	background-color: rgba(255, 255, 255, 0);\n"
-"    font-size: 9px;\n"
+        GameTitle = new QLabel(Menu);
+        GameTitle->setObjectName(QString::fromUtf8("GameTitle"));
+        GameTitle->setFont(font);
+        GameTitle->setStyleSheet(QString::fromUtf8("QLabel#GameTitle {\n"
+"    color: White;\n"
+"    font-size: 64px;\n"
 "}\n"
 ""));
+        GameTitle->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
-        gridLayout->addWidget(SeparatorLine2, 7, 2, 1, 3);
+        gridLayout->addWidget(GameTitle, 1, 2, 1, 1);
 
-        SeparatorLine5 = new QLabel(Menu);
-        SeparatorLine5->setObjectName(QString::fromUtf8("SeparatorLine5"));
-        SeparatorLine5->setFont(font);
-        SeparatorLine5->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine5 {\n"
-"	background-color: rgba(255, 255, 255, 0);\n"
-"    font-size: 9px;\n"
+        BulletinsBoard = new QListView(Menu);
+        BulletinsBoard->setObjectName(QString::fromUtf8("BulletinsBoard"));
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(BulletinsBoard->sizePolicy().hasHeightForWidth());
+        BulletinsBoard->setSizePolicy(sizePolicy1);
+        BulletinsBoard->setMinimumSize(QSize(0, 0));
+        BulletinsBoard->setMaximumSize(QSize(16777215, 16777215));
+        BulletinsBoard->setFont(font);
+
+        gridLayout->addWidget(BulletinsBoard, 3, 4, 5, 1);
+
+        BulletinsBoardTitle = new QLabel(Menu);
+        BulletinsBoardTitle->setObjectName(QString::fromUtf8("BulletinsBoardTitle"));
+        BulletinsBoardTitle->setFont(font);
+        BulletinsBoardTitle->setStyleSheet(QString::fromUtf8("QLabel#BulletinsBoardTitle {\n"
+"    color: White;\n"
+"    font-size: 28px;\n"
 "}\n"
 ""));
+        BulletinsBoardTitle->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
 
-        gridLayout->addWidget(SeparatorLine5, 0, 5, 8, 1);
+        gridLayout->addWidget(BulletinsBoardTitle, 2, 4, 1, 1);
 
 
         retranslateUi(Menu);
@@ -212,21 +256,22 @@ public:
     void retranslateUi(QWidget *Menu)
     {
         Menu->setWindowTitle(QCoreApplication::translate("Menu", "HatPuter\347\232\204C++\346\225\231\345\255\246", nullptr));
-        GameTitle->setText(QCoreApplication::translate("Menu", "HatPuter\347\232\204C++\346\225\231\345\255\246", nullptr));
-        SeparatorLine1->setText(QCoreApplication::translate("Menu", "<html><head/><body><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font"
-                        "-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p></body></html>", nullptr));
-        SeparatorLine4->setText(QCoreApplication::translate("Menu", "\345\210\206\345\211\262\347\272\277\345\210\206\345\211\262\347\272\277", nullptr));
-        StartGame->setText(QCoreApplication::translate("Menu", "\345\274\200\345\247\213\346\270\270\346\210\217", nullptr));
-        ContinueGame->setText(QCoreApplication::translate("Menu", "\347\273\247\347\273\255\346\270\270\346\210\217", nullptr));
-        label_2->setText(QCoreApplication::translate("Menu", "TextLabel", nullptr));
-        Exit->setText(QCoreApplication::translate("Menu", "\351\200\200\345\207\272", nullptr));
-        Settings->setText(QCoreApplication::translate("Menu", "\350\256\276\347\275\256", nullptr));
-        label->setText(QCoreApplication::translate("Menu", "TextLabel", nullptr));
-        label_3->setText(QCoreApplication::translate("Menu", "TextLabel", nullptr));
-        SeparatorLine6->setText(QCoreApplication::translate("Menu", "\345\210\206\345\211\262\347\272\277\345\210\206\345\211\262\347\272\277\345\210\206\345\211\262\347\272\277", nullptr));
-        SeparatorLine3->setText(QCoreApplication::translate("Menu", "\345\210\206\345\211\262\347\272\277", nullptr));
         SeparatorLine2->setText(QCoreApplication::translate("Menu", "\345\210\206\345\211\262\347\272\277", nullptr));
         SeparatorLine5->setText(QCoreApplication::translate("Menu", "\345\210\206\345\211\262\347\272\277\345\210\206\345\211\262\347\272\277", nullptr));
+        SeparatorLine1->setText(QCoreApplication::translate("Menu", "<html><head/><body><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p><p><span style=\" font"
+                        "-size:7pt;\">\345\210\206\345\211\262\347\272\277</span></p></body></html>", nullptr));
+        StartGame->setText(QCoreApplication::translate("Menu", "\345\274\200\345\247\213\346\270\270\346\210\217", nullptr));
+        ContinueGame->setText(QCoreApplication::translate("Menu", "\347\273\247\347\273\255\346\270\270\346\210\217", nullptr));
+        SeparatorLine7->setText(QCoreApplication::translate("Menu", "\345\210\206\345\211\262\347\272\277", nullptr));
+        Exit->setText(QCoreApplication::translate("Menu", "\351\200\200\345\207\272", nullptr));
+        Settings->setText(QCoreApplication::translate("Menu", "\350\256\276\347\275\256", nullptr));
+        SeparatorLine8->setText(QCoreApplication::translate("Menu", "\345\210\206\345\211\262\347\272\277", nullptr));
+        SeparatorLine9->setText(QCoreApplication::translate("Menu", "\345\210\206\345\211\262\347\272\277", nullptr));
+        SeparatorLine6->setText(QCoreApplication::translate("Menu", "\345\210\206\345\211\262\347\272\277\345\210\206\345\211\262\347\272\277\345\210\206\345\211\262\347\272\277", nullptr));
+        SeparatorLine4->setText(QCoreApplication::translate("Menu", "\345\210\206\345\211\262\347\272\277\345\210\206\345\211\262\347\272\277", nullptr));
+        SeparatorLine3->setText(QCoreApplication::translate("Menu", "\345\210\206\345\211\262\347\272\277", nullptr));
+        GameTitle->setText(QCoreApplication::translate("Menu", "HatPuter\347\232\204C++\346\225\231\345\255\246", nullptr));
+        BulletinsBoardTitle->setText(QCoreApplication::translate("Menu", "\350\277\221\346\234\237\345\205\254\345\221\212", nullptr));
     } // retranslateUi
 
 };

@@ -16,6 +16,8 @@ public:
     ~Menu();
 
     void DisplayOptions(); // 显示选项
+    void SetBulletins(); // 获取公告
+    void ShowBulletins(); // 显示公告
 
 signals:
     void Finished(); // 函数执行结束信号
