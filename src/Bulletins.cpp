@@ -1,67 +1,72 @@
 #include "../include/Menu.h"
+#include "ui_Menu.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QJsonDocument>
 #include <QJsonArray>
+#include <QJsonObject>
 #include <QStandardItemModel>
 #include <QColor>
-
-// 获取公告
-void Menu::SetBulletins()
-{
-    static QNetworkAccessManager mgr;
-
-    QNetworkRequest req(QUrl(
-        "https://raw.githubusercontent.com/"
-        "HatPuter/HatPuterCppTeaching-Server/"
-        "main/Bulletins/Bulletins.json"
-    ));
-    req.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
-
-    QNetworkReply* reply = mgr.get(req);
-
-    QObject::connect(reply, &QNetworkReply::finished, this, [this, reply] {
-        qDebug() << "HTTP error:" << reply->error();
-        qDebug() << "errorString:" << reply->errorString();
-        qDebug() << "url:" << reply->url();
-
-        reply->deleteLater();
-
-        if (reply->error() != QNetworkReply::NoError)
-            //return;
-
-        QJsonDocument doc = QJsonDocument::fromJson(reply->readAll());
-        QJsonArray arr = doc["bulletins"].toArray();
-
-        auto* model = new QStandardItemModel(this);
-
-        for (auto v : arr) {
-            QJsonObject o = v.toObject();
-
-            QString line = o["title"].toString()
-                         + " · "
-                         + o["content"].toString();
-
-            auto* item = new QStandardItem(line);
-
-            if (o["category"] == "Important")
-                item->setForeground(Qt::yellow);
-            else if (o["category"] == "Moderate")
-                item->setForeground(QColor(255, 200, 100));
-            else
-                item->setForeground(Qt::white);
-
-            model->appendRow(item);
-        }
-
-        ui->BulletinsBoard->setModel(model);
-        ui->BulletinsBoard->setResizeMode(QListView::Adjust);
-    });
-}
+#include <QListView>
 
 // 显示公告
 void Menu::ShowBulletins()
 {
-    SetBulletins();
+    // ===== 网络：从 GitHub 拉公告 =====
+    static QNetworkAccessManager bulletinNetworkManager;
+
+    QUrl bulletinJsonUrl(
+        "https://raw.githubusercontent.com/"
+        "HatPuter/HatPuterCppTeaching-Server/"
+        "main/Bulletins/Bulletins.json"
+    );
+
+    QNetworkRequest bulletinRequest(bulletinJsonUrl);
+    bulletinRequest.setAttribute(
+        QNetworkRequest::RedirectPolicyAttribute,
+        QNetworkRequest::NoLessSafeRedirectPolicy
+        );
+
+    QNetworkReply* networkReply = bulletinNetworkManager.get(bulletinRequest);
+
+    // ===== 收到数据后解析并渲染 =====
+    QObject::connect(networkReply, &QNetworkReply::finished, this, [this, networkReply] {
+
+        QByteArray rawJsonData = networkReply->readAll();
+        QJsonDocument jsonDocument = QJsonDocument::fromJson(rawJsonData);
+        QJsonArray bulletinArray = jsonDocument.object()["bulletins"].toArray();
+
+        auto* bulletinModel = new QStandardItemModel(this);
+
+        // ===== 逐条转成列表项 =====
+        for (const QJsonValue& bulletinValue : bulletinArray) {
+            QJsonObject bulletinObject = bulletinValue.toObject();
+
+            QString title   = bulletinObject["title"].toString();
+            QString content = bulletinObject["content"].toString();
+            QString category = bulletinObject["category"].toString();
+
+            auto* item = new QStandardItem(title + " · " + content);
+
+            // ===== 按分类上色 =====
+            if (category == "Important") {
+                item->setForeground(Qt::red);
+            }
+            else if (category == "Moderate") {
+                item->setForeground(Qt::yellow);
+            }
+            else {
+                item->setForeground(Qt::white);
+            }
+
+            bulletinModel->appendRow(item);
+        }
+
+        // 显示公告
+        ui->BulletinsBoard->setModel(bulletinModel);
+        ui->BulletinsBoard->setResizeMode(QListView::Adjust);
+
+        networkReply->deleteLater();
+    });
 }

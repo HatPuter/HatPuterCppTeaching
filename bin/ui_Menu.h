@@ -95,7 +95,7 @@ public:
         StartGame->setMaximumSize(QSize(16777215, 16777215));
         StartGame->setFont(font);
         StartGame->setStyleSheet(QString::fromUtf8("QLabel#StartGame {\n"
-"    color: White;\n"
+"    color: white;\n"
 "    font-size: 32px;\n"
 "}\n"
 ""));
@@ -106,7 +106,7 @@ public:
         ContinueGame->setObjectName(QString::fromUtf8("ContinueGame"));
         ContinueGame->setFont(font);
         ContinueGame->setStyleSheet(QString::fromUtf8("QLabel#ContinueGame {\n"
-"    color: White;\n"
+"    color: white;\n"
 "    font-size: 32px;\n"
 "}\n"
 ""));
@@ -128,7 +128,7 @@ public:
         Exit->setObjectName(QString::fromUtf8("Exit"));
         Exit->setFont(font);
         Exit->setStyleSheet(QString::fromUtf8("QLabel#Exit {\n"
-"    color: White;\n"
+"    color: white;\n"
 "    font-size: 32px;\n"
 "}\n"
 ""));
@@ -139,7 +139,7 @@ public:
         Settings->setObjectName(QString::fromUtf8("Settings"));
         Settings->setFont(font);
         Settings->setStyleSheet(QString::fromUtf8("QLabel#Settings {\n"
-"    color: White;\n"
+"    color: white;\n"
 "    font-size: 32px;\n"
 "}\n"
 ""));
@@ -214,7 +214,7 @@ public:
         GameTitle->setObjectName(QString::fromUtf8("GameTitle"));
         GameTitle->setFont(font);
         GameTitle->setStyleSheet(QString::fromUtf8("QLabel#GameTitle {\n"
-"    color: White;\n"
+"    color: white;\n"
 "    font-size: 64px;\n"
 "}\n"
 ""));
@@ -232,6 +232,11 @@ public:
         BulletinsBoard->setMinimumSize(QSize(0, 0));
         BulletinsBoard->setMaximumSize(QSize(16777215, 16777215));
         BulletinsBoard->setFont(font);
+        BulletinsBoard->setStyleSheet(QString::fromUtf8("QListView#BulletinsBoard {\n"
+"    background-color: rgba(255, 255, 255, 0);\n"
+"    font-size: 22px;\n"
+"}\n"
+""));
 
         gridLayout->addWidget(BulletinsBoard, 3, 4, 5, 1);
 
@@ -239,7 +244,7 @@ public:
         BulletinsBoardTitle->setObjectName(QString::fromUtf8("BulletinsBoardTitle"));
         BulletinsBoardTitle->setFont(font);
         BulletinsBoardTitle->setStyleSheet(QString::fromUtf8("QLabel#BulletinsBoardTitle {\n"
-"    color: White;\n"
+"    color: white;\n"
 "    font-size: 28px;\n"
 "}\n"
 ""));

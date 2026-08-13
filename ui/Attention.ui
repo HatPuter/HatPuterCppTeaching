@@ -55,7 +55,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel#Content {
-    color: White;
+    color: white;
     font-size: 30px;
 }
 </string>
@@ -98,7 +98,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel#Title {
-    color: Red;
+    color: red;
     font-size: 64px;
 }
 </string>
@@ -121,7 +121,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel#Note {
-    color: White;
+    color: white;
     font-size: 28px;
 }
 </string>

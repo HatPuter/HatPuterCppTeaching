@@ -1,4 +1,5 @@
 release/Menu.o
+release/Bulletins.o
 release/Animation.o
 release/Attention.o
 release/Creator.o

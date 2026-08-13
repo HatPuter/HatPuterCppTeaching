@@ -56,7 +56,7 @@ public:
         Content->setObjectName(QString::fromUtf8("Content"));
         Content->setFont(font);
         Content->setStyleSheet(QString::fromUtf8("QLabel#Content {\n"
-"    color: White;\n"
+"    color: white;\n"
 "    font-size: 30px;\n"
 "}\n"
 ""));
@@ -79,7 +79,7 @@ public:
         Title->setObjectName(QString::fromUtf8("Title"));
         Title->setFont(font);
         Title->setStyleSheet(QString::fromUtf8("QLabel#Title {\n"
-"    color: Red;\n"
+"    color: red;\n"
 "    font-size: 64px;\n"
 "}\n"
 ""));
@@ -91,7 +91,7 @@ public:
         Note->setObjectName(QString::fromUtf8("Note"));
         Note->setFont(font);
         Note->setStyleSheet(QString::fromUtf8("QLabel#Note {\n"
-"    color: White;\n"
+"    color: white;\n"
 "    font-size: 28px;\n"
 "}\n"
 ""));

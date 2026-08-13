@@ -26,6 +26,7 @@ Menu::Menu(QWidget *parent)
     install(ui->Exit);
 
     Menu::DisplayOptions(); // 显示选项
+    Menu::ShowBulletins(); // 显示公告
 }
 
 Menu::~Menu()

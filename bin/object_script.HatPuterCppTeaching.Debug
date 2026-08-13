@@ -1,4 +1,5 @@
 debug/Menu.o
+debug/Bulletins.o
 debug/Animation.o
 debug/Attention.o
 debug/Creator.o

@@ -1,4 +1,4 @@
-QT += widgets
+QT += widgets gui network
 
 CONFIG += c++17
 
@@ -8,6 +8,7 @@ CONFIG += c++17
 
 SOURCES += \
     src/Menu.cpp \
+    src/Bulletins.cpp \
     src/Animation.cpp \
     src/Attention.cpp \
     src/Creator.cpp \

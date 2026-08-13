@@ -87,7 +87,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel#CreatorAvatar {
-    color: White;
+    color: white;
     font-size: 50px;
 }
 </string>
@@ -136,7 +136,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel#CreatorName {
-    color: White;
+    color: white;
     font-size: 50px;
 }
 </string>

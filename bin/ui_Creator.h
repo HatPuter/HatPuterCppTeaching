@@ -74,7 +74,7 @@ public:
         CreatorAvatar->setSizePolicy(sizePolicy);
         CreatorAvatar->setFont(font);
         CreatorAvatar->setStyleSheet(QString::fromUtf8("QLabel#CreatorAvatar {\n"
-"    color: White;\n"
+"    color: white;\n"
 "    font-size: 50px;\n"
 "}\n"
 ""));
@@ -99,7 +99,7 @@ public:
         CreatorName->setSizePolicy(sizePolicy);
         CreatorName->setFont(font);
         CreatorName->setStyleSheet(QString::fromUtf8("QLabel#CreatorName {\n"
-"    color: White;\n"
+"    color: white;\n"
 "    font-size: 50px;\n"
 "}\n"
 ""));

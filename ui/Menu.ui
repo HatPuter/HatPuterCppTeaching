@@ -106,7 +106,7 @@
        </property>
        <property name="styleSheet">
         <string notr="true">QLabel#StartGame {
-    color: White;
+    color: white;
     font-size: 32px;
 }
 </string>
@@ -126,7 +126,7 @@
        </property>
        <property name="styleSheet">
         <string notr="true">QLabel#ContinueGame {
-    color: White;
+    color: white;
     font-size: 32px;
 }
 </string>
@@ -166,7 +166,7 @@
        </property>
        <property name="styleSheet">
         <string notr="true">QLabel#Exit {
-    color: White;
+    color: white;
     font-size: 32px;
 }
 </string>
@@ -186,7 +186,7 @@
        </property>
        <property name="styleSheet">
         <string notr="true">QLabel#Settings {
-    color: White;
+    color: white;
     font-size: 32px;
 }
 </string>
@@ -320,7 +320,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel#GameTitle {
-    color: White;
+    color: white;
     font-size: 64px;
 }
 </string>
@@ -356,7 +356,15 @@
      <property name="font">
       <font>
        <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QListView#BulletinsBoard {
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 22px;
+}
+</string>
      </property>
     </widget>
    </item>
@@ -370,7 +378,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel#BulletinsBoardTitle {
-    color: White;
+    color: white;
     font-size: 28px;
 }
 </string>
