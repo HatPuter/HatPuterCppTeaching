@@ -1,7 +1,7 @@
 #include "../include/Menu.h"
 #include "ui_Menu.h"
 
-#include <QkeyEvent>
+#include <QKeyEvent>
 
 // 键盘事件
 void Menu::keyPressEvent(QKeyEvent *event)
@@ -56,6 +56,48 @@ void Menu::keyPressEvent(QKeyEvent *event)
     }
 
     DisplayOptions();
+}
+
+// 事件过滤器
+bool Menu::eventFilter(QObject* object, QEvent* event)
+{
+    /// 菜单选项
+    // 触碰
+    if (event->type() == QEvent::Enter) {
+        if (object == ui->StartGame) {
+            m_menuOptions = MenuOptions::StartGame;
+        }
+        else if (object == ui->ContinueGame) {
+            m_menuOptions = MenuOptions::ContinueGame;
+        }
+        else if (object == ui->Settings) {
+            m_menuOptions = MenuOptions::Settings;
+        }
+        else if (object == ui->Exit) {
+            m_menuOptions = MenuOptions::Exit;
+        }
+
+        DisplayOptions();
+    }
+    // 点击
+    if (event->type() == QEvent::MouseButtonRelease) {
+        auto* me = static_cast<QMouseEvent*>(event);
+        if (me->button() == Qt::LeftButton) {
+            switch (m_menuOptions) {
+            case MenuOptions::StartGame:
+                break;
+            case MenuOptions::ContinueGame:
+                break;
+            case MenuOptions::Settings:
+                break;
+            case MenuOptions::Exit:
+                QApplication::quit();
+                break;
+            }
+        }
+    }
+
+    return QWidget::eventFilter(object, event);
 }
 
 // 显示选项

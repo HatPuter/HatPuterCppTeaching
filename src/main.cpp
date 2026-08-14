@@ -1,4 +1,4 @@
-#include "../include/Gamemain.h"
+#include "../include/GameMain.h"
 
 #include <QApplication>
 #include <QLocale>

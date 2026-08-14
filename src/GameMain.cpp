@@ -1,4 +1,4 @@
-#include "../include/Gamemain.h"
+#include "../include/GameMain.h"
 #include "../include/Creator.h"
 #include "../include/Attention.h"
 #include "../include/Menu.h"

@@ -13,8 +13,6 @@ Menu::Menu(QWidget *parent)
     ui->setupUi(this);
     Menu::ShowBulletins(); // 显示公告
 
-    ui->BulletinsBoard->viewport()->installEventFilter(this);
-
     Animation::RunAnimation(this, {
         Animation::FadeInOrOut(this, 0.0, 1.0, 500)
     }, false, [this]() {
@@ -37,56 +35,4 @@ Menu::Menu(QWidget *parent)
 Menu::~Menu()
 {
     delete ui;
-}
-
-// 事件过滤器
-bool Menu::eventFilter(QObject* object, QEvent* event)
-{
-    /// 菜单选项
-    // 触碰
-    if (event->type() == QEvent::Enter) {
-        if (object == ui->StartGame) {
-            m_menuOptions = MenuOptions::StartGame;
-        }
-        else if (object == ui->ContinueGame) {
-            m_menuOptions = MenuOptions::ContinueGame;
-        }
-        else if (object == ui->Settings) {
-            m_menuOptions = MenuOptions::Settings;
-        }
-        else if (object == ui->Exit) {
-            m_menuOptions = MenuOptions::Exit;
-        }
-
-        DisplayOptions();
-    }
-    // 点击
-    if (event->type() == QEvent::MouseButtonRelease) {
-        auto* me = static_cast<QMouseEvent*>(event);
-        if (me->button() == Qt::LeftButton) {
-            switch (m_menuOptions) {
-            case MenuOptions::StartGame:
-                break;
-            case MenuOptions::ContinueGame:
-                break;
-            case MenuOptions::Settings:
-                break;
-            case MenuOptions::Exit:
-                QApplication::quit();
-                break;
-            }
-        }
-    }
-
-    // 近期公告
-    if (object == ui->BulletinsBoard->viewport()) {
-        if (event->type() == QEvent::MouseButtonPress) {
-            QMouseEvent* mouseEvent = static_cast<QMouseEvent*>(event);
-
-            QModelIndex index = ui->BulletinsBoard->indexAt(mouseEvent->pos());
-            ui->BulletinsBoard->clearSelection();
-        }
-    }
-
-    return QWidget::eventFilter(object, event);
 }
