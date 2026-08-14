@@ -364,7 +364,19 @@
     background-color: rgba(255, 255, 255, 0);
     font-size: 22px;
 }
+QListView#BulletinsBoard::item {
+    height: 42px;
+}
+QListView#BulletinsBoard::item:hover {
+    background-color: rgba(152, 251, 152, 64);
+}
+QListView#BulletinsBoard::item:selected {
+    background-color: rgba(152, 251, 152, 100);
+}
 </string>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
      </property>
     </widget>
    </item>

@@ -236,7 +236,17 @@ public:
 "    background-color: rgba(255, 255, 255, 0);\n"
 "    font-size: 22px;\n"
 "}\n"
+"QListView#BulletinsBoard::item {\n"
+"    height: 42px;\n"
+"}\n"
+"QListView#BulletinsBoard::item:hover {\n"
+"    background-color: rgba(152, 251, 152, 64);\n"
+"}\n"
+"QListView#BulletinsBoard::item:selected {\n"
+"    background-color: rgba(152, 251, 152, 100);\n"
+"}\n"
 ""));
+        BulletinsBoard->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
         gridLayout->addWidget(BulletinsBoard, 3, 4, 5, 1);
 

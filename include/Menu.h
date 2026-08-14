@@ -23,7 +23,7 @@ signals:
 
 protected:
     void keyPressEvent(QKeyEvent *event) override; // 键盘事件
-    bool eventFilter(QObject* object, QEvent* event) override; // 事件过滤器(菜单选项触碰)
+    bool eventFilter(QObject* object, QEvent* event) override; // 事件过滤器
 
 private:
     Ui::Menu *ui;
