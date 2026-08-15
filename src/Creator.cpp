@@ -26,10 +26,6 @@ Creator::Creator(QWidget *parent)
     }, true, [this]() {
         emit Creator::Finished(); // 发送函数执行结束信号
     });
-
-    // // 进入注意页面
-    // Attention *attention = new Attention(this);
-    // static_cast<GameMain*>(parent)->SwitchToUI(attention);
 }
 
 Creator::~Creator()

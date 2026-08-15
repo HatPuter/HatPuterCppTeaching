@@ -50,7 +50,7 @@ public:
         Menu->setFont(font);
         Menu->setLayoutDirection(Qt::LeftToRight);
         Menu->setStyleSheet(QString::fromUtf8("QWidget#Menu {\n"
-"    background-color: Black;\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(7, 255, 0, 255), stop:1 rgba(0, 102, 255, 255));\n"
 "}\n"
 ""));
         gridLayout = new QGridLayout(Menu);
@@ -59,6 +59,7 @@ public:
         SeparatorLine2->setObjectName(QString::fromUtf8("SeparatorLine2"));
         SeparatorLine2->setFont(font);
         SeparatorLine2->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine2 {\n"
+"    color: transparent;\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "    font-size: 9px;\n"
 "}\n"
@@ -70,6 +71,7 @@ public:
         SeparatorLine5->setObjectName(QString::fromUtf8("SeparatorLine5"));
         SeparatorLine5->setFont(font);
         SeparatorLine5->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine5 {\n"
+"    color: transparent;\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "    font-size: 9px;\n"
 "}\n"
@@ -81,7 +83,8 @@ public:
         SeparatorLine1->setObjectName(QString::fromUtf8("SeparatorLine1"));
         SeparatorLine1->setFont(font);
         SeparatorLine1->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine1 {\n"
-"	background-color: rgba(255, 255, 255, 0);\n"
+"    color: transparent;\n"
+"	background-color: transparent;\n"
 "    font-size: 9px;\n"
 "}\n"
 ""));
@@ -117,6 +120,7 @@ public:
         SeparatorLine7->setObjectName(QString::fromUtf8("SeparatorLine7"));
         SeparatorLine7->setFont(font);
         SeparatorLine7->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine7 {\n"
+"    color: transparent;\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "    font-size: 9px;\n"
 "}\n"
@@ -150,6 +154,7 @@ public:
         SeparatorLine8->setObjectName(QString::fromUtf8("SeparatorLine8"));
         SeparatorLine8->setFont(font);
         SeparatorLine8->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine8 {\n"
+"    color: transparent;\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "    font-size: 9px;\n"
 "}\n"
@@ -161,6 +166,7 @@ public:
         SeparatorLine9->setObjectName(QString::fromUtf8("SeparatorLine9"));
         SeparatorLine9->setFont(font);
         SeparatorLine9->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine9 {\n"
+"    color: transparent;\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "    font-size: 9px;\n"
 "}\n"
@@ -180,6 +186,7 @@ public:
         SeparatorLine6->setSizePolicy(sizePolicy);
         SeparatorLine6->setFont(font);
         SeparatorLine6->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine6 {\n"
+"    color: transparent;\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "    font-size: 9px;\n"
 "}\n"
@@ -192,6 +199,7 @@ public:
         SeparatorLine4->setMaximumSize(QSize(16777215, 16777215));
         SeparatorLine4->setFont(font);
         SeparatorLine4->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine4 {\n"
+"    color: transparent;\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "    font-size: 9px;\n"
 "}\n"
@@ -203,6 +211,7 @@ public:
         SeparatorLine3->setObjectName(QString::fromUtf8("SeparatorLine3"));
         SeparatorLine3->setFont(font);
         SeparatorLine3->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine3 {\n"
+"    color: transparent;\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "    font-size: 9px;\n"
 "}\n"
@@ -235,6 +244,10 @@ public:
         BulletinsBoard->setStyleSheet(QString::fromUtf8("QListView#BulletinsBoard {\n"
 "    background-color: rgba(255, 255, 255, 0);\n"
 "    font-size: 22px;\n"
+"    border-color: white;\n"
+"    border-width: 2px;\n"
+"    border-style: solid;\n"
+"    border-radius: 6px;\n"
 "}\n"
 "QListView#BulletinsBoard::item {\n"
 "    height: 42px;\n"

@@ -1,3 +1,4 @@
+debug/ContentWindow.o
 debug/Menu.o
 debug/Bulletins.o
 debug/Animation.o
@@ -8,6 +9,7 @@ debug/MenuOptions.o
 debug/UserData.o
 debug/main.o
 debug/qrc_qmake_qmake_qm_files.o
+debug/moc_ContentWindow.o
 debug/moc_Menu.o
 debug/moc_Attention.o
 debug/moc_Creator.o

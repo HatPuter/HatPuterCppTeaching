@@ -2,6 +2,9 @@
 #define MENU_H
 
 #include <QWidget>
+#include <QStyleOptionViewItem>
+
+class ContentWindow;
 
 namespace Ui {
 class Menu;
@@ -17,6 +20,7 @@ public:
 
     void DisplayOptions(); // 显示选项
     void ShowBulletins(); // 显示公告
+    void PaintBulletins(QPainter* painter, const QStyleOptionViewItem& styleOption, const QModelIndex& modelIndex); // 绘制公告
 
 signals:
     void Finished(); // 函数执行结束信号
@@ -27,6 +31,7 @@ protected:
 
 private:
     Ui::Menu *ui;
+    ContentWindow *m_contentWindow; // 公告内容窗
 
     // 菜单选项
     enum class MenuOptions {

@@ -45,6 +45,7 @@ public:
         SeparatorLine1->setObjectName(QString::fromUtf8("SeparatorLine1"));
         SeparatorLine1->setFont(font);
         SeparatorLine1->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine1 {\n"
+"    color: transparent;\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "    font-size: 9px;\n"
 "}\n"
@@ -68,6 +69,7 @@ public:
         SeparatorLine2->setObjectName(QString::fromUtf8("SeparatorLine2"));
         SeparatorLine2->setFont(font);
         SeparatorLine2->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine2 {\n"
+"    color: transparent;\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "    font-size: 9px;\n"
 "}\n"
@@ -91,7 +93,7 @@ public:
         Note->setObjectName(QString::fromUtf8("Note"));
         Note->setFont(font);
         Note->setStyleSheet(QString::fromUtf8("QLabel#Note {\n"
-"    color: white;\n"
+"    color: gray;\n"
 "    font-size: 28px;\n"
 "}\n"
 ""));

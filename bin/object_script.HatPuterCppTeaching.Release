@@ -1,3 +1,4 @@
+release/ContentWindow.o
 release/Menu.o
 release/Bulletins.o
 release/Animation.o
@@ -8,6 +9,7 @@ release/MenuOptions.o
 release/UserData.o
 release/main.o
 release/qrc_qmake_qmake_qm_files.o
+release/moc_ContentWindow.o
 release/moc_Menu.o
 release/moc_Attention.o
 release/moc_Creator.o

@@ -1,4 +1,5 @@
 #include "../include/Menu.h"
+#include "../include/ContentWindow.h"
 #include "ui_Menu.h"
 
 #include <QNetworkAccessManager>
@@ -12,6 +13,7 @@
 #include <QStyledItemDelegate>
 #include <QPainter>
 #include <QApplication>
+#include <QStyle>
 
 // 公告绘制
 class BulletinsDelegate : public QStyledItemDelegate {
@@ -19,25 +21,29 @@ public:
     explicit BulletinsDelegate(QObject* parent = nullptr)
         : QStyledItemDelegate(parent) {}
 
-    void paint(QPainter* painter,
-               const QStyleOptionViewItem& styleOption,
-               const QModelIndex& modelIndex) const override
+    void paint(QPainter* painter, const QStyleOptionViewItem& styleOption, const QModelIndex& modelIndex) const override
     {
+        // 获取当前控件状态
         QStyleOptionViewItem viewItemOption = styleOption;
         initStyleOption(&viewItemOption, modelIndex);
 
+        // 保存信息
         QString bulletinsTitle = modelIndex.data(Qt::DisplayRole).toString();
         QString bulletinsTime = modelIndex.data(Qt::UserRole + 1).toString();
         QString bulletinsCategory = modelIndex.data(Qt::UserRole).toString();
 
-        viewItemOption.text = QString();
-        QApplication::style()->drawControl(
+        viewItemOption.text = QString(); // 清空当前选项内容
+        // 根据状态绘制背景色
+        const QWidget *widget = viewItemOption.widget;
+        QStyle *style = widget != nullptr ? widget->style() : QApplication::style();
+        style->drawControl(
             QStyle::CE_ItemViewItem,
             &viewItemOption,
             painter,
-            viewItemOption.widget
+            widget
         );
 
+        // 保存
         painter->save();
 
         // 获取时间宽度
@@ -65,13 +71,14 @@ public:
             painter->setPen(Qt::white);
         }
 
+        // 绘制标题
         painter->drawText(
             viewItemOption.rect.adjusted(8, 0, 0, 0),
             Qt::AlignVCenter | Qt::AlignLeft,
             elidedTitle
         );
 
-        // 时间
+        // 绘制时间
         painter->setPen(Qt::gray);
         painter->drawText(
             viewItemOption.rect.adjusted(0, 0, -8, 0),
@@ -79,6 +86,7 @@ public:
             fm.elidedText(bulletinsTime, Qt::ElideRight, timeWidth)
         );
 
+        // 恢复状态
         painter->restore();
     }
 };
@@ -96,10 +104,28 @@ void Menu::ShowBulletins()
 
     // 绑定delegate
     static bool delegateInstalled = false;
-    if (!delegateInstalled) {
+    if (delegateInstalled == false) {
         ui->BulletinsBoard->setItemDelegate(new BulletinsDelegate(ui->BulletinsBoard));
         delegateInstalled = true;
     }
+
+    // 点击公告跳转内容页
+    QObject::connect(ui->BulletinsBoard, &QListView::clicked, this, [this](const QModelIndex &index) {
+        if (index.isValid() == false) {
+            return;
+        }
+
+        QString title = index.data(Qt::DisplayRole).toString();
+        QString content = index.data(Qt::UserRole + 2).toString();
+        QString category = index.data(Qt::UserRole).toString();
+
+        // 内容窗
+        m_contentWindow = new ContentWindow(this);
+        m_contentWindow->show();
+        m_contentWindow->ShowContentWindow(title, content, category);
+
+        ui->BulletinsBoard->clearSelection(); // 取消列表选中状态
+    });
 
     // 获取公告文件
     static QNetworkAccessManager bulletinNetworkManager;
@@ -146,10 +172,12 @@ void Menu::ShowBulletins()
             QString title = bulletinObject["title"].toString();
             QString time = bulletinObject["time"].toString();
             QString category = bulletinObject["category"].toString();
+            QString content = bulletinObject["content"].toString();
 
             auto* item = new QStandardItem(title);
             item->setData(time, Qt::UserRole + 1);
             item->setData(category, Qt::UserRole);
+            item->setData(content, Qt::UserRole + 2);
 
             bulletinsModel->appendRow(item);
         }

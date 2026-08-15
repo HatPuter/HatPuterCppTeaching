@@ -1,5 +1,6 @@
 #include "../include/Menu.h"
 #include "../include/Animation.h"
+#include "../include/ContentWindow.h"
 #include "ui_Menu.h"
 
 #include <QEvent>
@@ -11,6 +12,13 @@ Menu::Menu(QWidget *parent)
     , m_menuOptions(MenuOptions::StartGame)
 {
     ui->setupUi(this);
+    ui->BulletinsBoard->setFocusPolicy(Qt::NoFocus);
+    this->setAttribute(Qt::WA_StyledBackground, true);
+
+    // 内容窗
+    m_contentWindow = new ContentWindow(this);
+    m_contentWindow->hide();
+
     Menu::ShowBulletins(); // 显示公告
 
     Animation::RunAnimation(this, {

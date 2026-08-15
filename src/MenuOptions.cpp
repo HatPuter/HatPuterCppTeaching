@@ -1,7 +1,9 @@
 #include "../include/Menu.h"
+#include "../include/ContentWindow.h"
 #include "ui_Menu.h"
 
 #include <QKeyEvent>
+#include <QCoreApplication>
 
 // 键盘事件
 void Menu::keyPressEvent(QKeyEvent *event)
