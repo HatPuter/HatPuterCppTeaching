@@ -10,6 +10,7 @@ Menu::Menu(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Menu)
     , m_menuOptions(MenuOptions::StartGame)
+    , m_ifSetBulletins(false)
 {
     ui->setupUi(this);
     ui->BulletinsBoard->setFocusPolicy(Qt::NoFocus);
@@ -44,3 +45,11 @@ Menu::~Menu()
 {
     delete ui;
 }
+
+void Menu::on_BulletinsBoard_doubleClicked(const QModelIndex &index)
+{
+    if (m_ifSetBulletins == false) {
+        ui->BulletinsBoard->clearSelection(); // 取消列表选中状态
+    }
+}
+

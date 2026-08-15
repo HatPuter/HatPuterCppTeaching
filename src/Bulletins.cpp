@@ -114,6 +114,10 @@ void Menu::ShowBulletins()
         if (index.isValid() == false) {
             return;
         }
+        else if (m_ifSetBulletins == false) {
+            ui->BulletinsBoard->clearSelection(); // 取消列表选中状态
+            return;
+        }
 
         QString title = index.data(Qt::DisplayRole).toString();
         QString content = index.data(Qt::UserRole + 2).toString();
@@ -161,6 +165,8 @@ void Menu::ShowBulletins()
             networkReply->deleteLater();
             return;
         }
+
+        m_ifSetBulletins = true; // 成功获取公告
 
         auto* bulletinsModel = new QStandardItemModel(this);
         QJsonArray bulletinsArray = jsonDocument.object()["bulletins"].toArray();

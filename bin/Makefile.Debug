@@ -975,6 +975,22 @@ debug/ContentWindow.o: ../src/ContentWindow.cpp ../include/ContentWindow.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtCore/QString \
 		ui_ContentWindow.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/QVariant \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QApplication \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qdesktopwidget.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QGridLayout \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qgridlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QLabel \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qframe.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtGui/QKeyEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\ContentWindow.o ..\src\ContentWindow.cpp
 
@@ -1109,6 +1125,27 @@ debug/Menu.o: ../src/Menu.cpp ../include/Menu.h \
 		../include/ContentWindow.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtCore/QString \
 		ui_Menu.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/QVariant \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QApplication \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qdesktopwidget.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QGridLayout \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qgridlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QLabel \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QListView \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlistview.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractitemview.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qitemselectionmodel.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractitemdelegate.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtCore/QEvent \
 		../../../Qt-5.15.2/mingw81_64/include/QtGui/QMouseEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\Menu.o ..\src\Menu.cpp
@@ -1234,6 +1271,27 @@ debug/Bulletins.o: ../src/Bulletins.cpp ../include/Menu.h \
 		../include/ContentWindow.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtCore/QString \
 		ui_Menu.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/QVariant \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QApplication \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qdesktopwidget.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QGridLayout \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qgridlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QLabel \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QListView \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlistview.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractitemview.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qitemselectionmodel.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractitemdelegate.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtNetwork/QNetworkAccessManager \
 		../../../Qt-5.15.2/mingw81_64/include/QtNetwork/qnetworkaccessmanager.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtNetwork/qtnetworkglobal.h \
@@ -1241,7 +1299,6 @@ debug/Bulletins.o: ../src/Bulletins.cpp ../include/Menu.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtNetwork/qnetworkrequest.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtCore/QSharedDataPointer \
 		../../../Qt-5.15.2/mingw81_64/include/QtCore/QUrl \
-		../../../Qt-5.15.2/mingw81_64/include/QtCore/QVariant \
 		../../../Qt-5.15.2/mingw81_64/include/QtCore/QVector \
 		../../../Qt-5.15.2/mingw81_64/include/QtCore/QObject \
 		../../../Qt-5.15.2/mingw81_64/include/QtNetwork/QSslConfiguration \
@@ -1275,25 +1332,12 @@ debug/Bulletins.o: ../src/Bulletins.cpp ../include/Menu.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtGui/QStandardItemModel \
 		../../../Qt-5.15.2/mingw81_64/include/QtGui/qstandarditemmodel.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtGui/QColor \
-		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QListView \
-		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlistview.h \
-		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractitemview.h \
-		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
-		../../../Qt-5.15.2/mingw81_64/include/QtCore/qitemselectionmodel.h \
-		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractitemdelegate.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QStyledItemDelegate \
 		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qstyleditemdelegate.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtGui/QPainter \
 		../../../Qt-5.15.2/mingw81_64/include/QtGui/qpainter.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtGui/qtextoption.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtGui/qpen.h \
-		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QApplication \
-		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
-		../../../Qt-5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
-		../../../Qt-5.15.2/mingw81_64/include/QtCore/qeventloop.h \
-		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qdesktopwidget.h \
-		../../../Qt-5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
-		../../../Qt-5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QStyle
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\Bulletins.o ..\src\Bulletins.cpp
 
@@ -1532,6 +1576,22 @@ debug/Attention.o: ../src/Attention.cpp ../include/Attention.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtCore/qanimationgroup.h \
 		../include/GameMain.h \
 		ui_Attention.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/QVariant \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QApplication \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qdesktopwidget.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QGridLayout \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qgridlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QLabel \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qframe.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtGui/QKeyEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\Attention.o ..\src\Attention.cpp
 
@@ -1651,6 +1711,23 @@ debug/Creator.o: ../src/Creator.cpp ../include/Creator.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtCore/qanimationgroup.h \
 		../include/Attention.h \
 		../include/GameMain.h \
+		ui_creator.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/QVariant \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QApplication \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qdesktopwidget.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QGridLayout \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qgridlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QLabel \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qframe.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtGui/QPixmap \
 		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QGraphicsEffect \
 		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qgraphicseffect.h
@@ -1777,6 +1854,20 @@ debug/GameMain.o: ../src/GameMain.cpp ../include/GameMain.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qrubberband.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qframe.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtCore/qabstractitemmodel.h \
+		ui_gamemain.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/QVariant \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QApplication \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qdesktopwidget.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QGridLayout \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qgridlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtGui/QKeyEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\GameMain.o ..\src\GameMain.cpp
 
@@ -1901,10 +1992,29 @@ debug/MenuOptions.o: ../src/MenuOptions.cpp ../include/Menu.h \
 		../include/ContentWindow.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtCore/QString \
 		ui_Menu.h \
-		../../../Qt-5.15.2/mingw81_64/include/QtGui/QKeyEvent \
-		../../../Qt-5.15.2/mingw81_64/include/QtCore/QCoreApplication \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/QVariant \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QApplication \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
-		../../../Qt-5.15.2/mingw81_64/include/QtCore/qeventloop.h
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qdesktopwidget.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QGridLayout \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qgridlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QLabel \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QListView \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qlistview.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractitemview.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qitemselectionmodel.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/QKeyEvent \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/QCoreApplication
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\MenuOptions.o ..\src\MenuOptions.cpp
 
 debug/UserData.o: ../src/UserData.cpp ../include/UserData.h \
@@ -2011,7 +2121,15 @@ debug/UserData.o: ../src/UserData.cpp ../include/UserData.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtGui/qvector2d.h \
 		../../../Qt-5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
-		ui_UserData.h
+		ui_UserData.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/QVariant \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/QApplication \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtWidgets/qdesktopwidget.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Qt-5.15.2/mingw81_64/include/QtGui/qinputmethod.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\UserData.o ..\src\UserData.cpp
 
 debug/main.o: ../src/main.cpp ../include/GameMain.h \
