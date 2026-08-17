@@ -1,6 +1,6 @@
 #include "../include/Menu.h"
 #include "../include/ContentWindow.h"
-#include "ui_Menu.h"
+//#include "ui_Menu.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
@@ -92,30 +92,30 @@ public:
 };
 
 // 显示公告
-void Menu::ShowBulletins()
+void Menu::ShowBulletins(QListView *BulletinsBoard)
 {
     // 正在获取提示
     auto* noteModel = new QStandardItemModel(this);
     noteModel->appendRow(new QStandardItem("正在获取公告..."));
     noteModel->item(0)->setForeground(Qt::gray);
 
-    ui->BulletinsBoard->setModel(noteModel);
-    ui->BulletinsBoard->setResizeMode(QListView::Adjust);
+    BulletinsBoard->setModel(noteModel);
+    BulletinsBoard->setResizeMode(QListView::Adjust);
 
     // 绑定delegate
     static bool delegateInstalled = false;
     if (delegateInstalled == false) {
-        ui->BulletinsBoard->setItemDelegate(new BulletinsDelegate(ui->BulletinsBoard));
+        BulletinsBoard->setItemDelegate(new BulletinsDelegate(BulletinsBoard));
         delegateInstalled = true;
     }
 
     // 点击公告跳转内容页
-    QObject::connect(ui->BulletinsBoard, &QListView::clicked, this, [this](const QModelIndex &index) {
+    QObject::connect(BulletinsBoard, &QListView::clicked, this, [this, BulletinsBoard](const QModelIndex &index) {
         if (index.isValid() == false) {
             return;
         }
         else if (m_ifSetBulletins == false) {
-            ui->BulletinsBoard->clearSelection(); // 取消列表选中状态
+            BulletinsBoard->clearSelection(); // 取消列表选中状态
             return;
         }
 
@@ -128,7 +128,7 @@ void Menu::ShowBulletins()
         m_contentWindow->show();
         m_contentWindow->ShowContentWindow(title, content, category);
 
-        ui->BulletinsBoard->clearSelection(); // 取消列表选中状态
+        BulletinsBoard->clearSelection(); // 取消列表选中状态
     });
 
     // 获取公告文件
@@ -144,14 +144,14 @@ void Menu::ShowBulletins()
 
     QNetworkReply* networkReply = bulletinNetworkManager.get(bulletinsRequest);
 
-    QObject::connect(networkReply, &QNetworkReply::finished, this, [this, networkReply] {
+    QObject::connect(networkReply, &QNetworkReply::finished, this, [this, networkReply, BulletinsBoard] {
         auto* fallbackModel = new QStandardItemModel(this);
 
         // 网络错误
         if (networkReply->error() != QNetworkReply::NoError) {
             fallbackModel->appendRow(new QStandardItem("公告获取失败"));
             fallbackModel->item(0)->setForeground(Qt::gray);
-            ui->BulletinsBoard->setModel(fallbackModel);
+            BulletinsBoard->setModel(fallbackModel);
             networkReply->deleteLater();
             return;
         }
@@ -161,7 +161,7 @@ void Menu::ShowBulletins()
         if (jsonDocument.isNull()) {
             fallbackModel->appendRow(new QStandardItem("公告文件解析错误"));
             fallbackModel->item(0)->setForeground(Qt::gray);
-            ui->BulletinsBoard->setModel(fallbackModel);
+            BulletinsBoard->setModel(fallbackModel);
             networkReply->deleteLater();
             return;
         }
@@ -188,7 +188,7 @@ void Menu::ShowBulletins()
             bulletinsModel->appendRow(item);
         }
 
-        ui->BulletinsBoard->setModel(bulletinsModel);
+        BulletinsBoard->setModel(bulletinsModel);
         networkReply->deleteLater();
     });
 }

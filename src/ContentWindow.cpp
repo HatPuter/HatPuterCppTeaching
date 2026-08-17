@@ -8,7 +8,6 @@ ContentWindow::ContentWindow(QWidget *parent)
     , ui(new Ui::ContentWindow)
 {
     ui->setupUi(this);
-    //this->setFocusPolicy(Qt::StrongFocus); // 允许获得键盘焦点
 }
 
 ContentWindow::~ContentWindow()
@@ -66,7 +65,10 @@ void ContentWindow::keyPressEvent(QKeyEvent *event)
 void ContentWindow::resizeEvent(QResizeEvent *event)
 {
     QWidget::resizeEvent(event);
-    if (parentWidget() != nullptr) {
-        setGeometry(parentWidget()->rect());
+    if (parentWidget() != nullptr && this->isVisible()) {
+        QRect parentRect = parentWidget()->rect();
+        if (this->geometry() != parentRect) {
+            setGeometry(parentRect);
+        }
     }
 }

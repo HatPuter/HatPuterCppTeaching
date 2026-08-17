@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QStyleOptionViewItem>
+#include <QListView>
 
 class ContentWindow;
 
@@ -19,7 +20,7 @@ public:
     ~Menu();
 
     void DisplayOptions(); // 显示选项
-    void ShowBulletins(); // 显示公告
+    void ShowBulletins(QListView *BulletinsBoard); // 显示公告
     void PaintBulletins(QPainter* painter, const QStyleOptionViewItem& styleOption, const QModelIndex& modelIndex); // 绘制公告
 
 signals:

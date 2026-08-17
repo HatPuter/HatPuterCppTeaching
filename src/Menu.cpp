@@ -20,7 +20,7 @@ Menu::Menu(QWidget *parent)
     m_contentWindow = new ContentWindow(this);
     m_contentWindow->hide();
 
-    Menu::ShowBulletins(); // 显示公告
+    Menu::ShowBulletins(ui->BulletinsBoard); // 显示公告
 
     Animation::RunAnimation(this, {
         Animation::FadeInOrOut(this, 0.0, 1.0, 500)
