@@ -2,30 +2,28 @@
 #include "ui_ContentWindow.h"
 
 #include <QKeyEvent>
-#include <QApplication>
 
 ContentWindow::ContentWindow(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::ContentWindow)
 {
     ui->setupUi(this);
-    // 安装事件过滤器到 QApplication，全局捕获按键，无需抢焦点
-    qApp->installEventFilter(this);
+    this->setFocusPolicy(Qt::StrongFocus); // 允许获得键盘焦点
 }
 
 ContentWindow::~ContentWindow()
 {
-    qApp->removeEventFilter(this);
     delete ui;
 }
 
 // 显示内容窗
 void ContentWindow::ShowContentWindow(QString title, QString content, QString category)
 {
+    this->setFocus(); // 获取焦点
+
     ui->Title->setText(title);
     ui->Content->setText(content);
 
-    this->setStyleSheet("QWidget#ContentWindow { background-color: rgba(255, 255, 255, 100); }");
     if (category == "Ordinary") {
         ui->Title->setStyleSheet("QLabel#Title { color: white; font-size: 42px; }");
     }
@@ -56,15 +54,11 @@ void ContentWindow::ShowContentWindow(QString title, QString content, QString ca
     this->raise();
 }
 
-// 事件过滤器：无需焦点即可捕获空格键
-bool ContentWindow::eventFilter(QObject *obj, QEvent *event)
+// 键盘事件
+void ContentWindow::keyPressEvent(QKeyEvent *event)
 {
-    if (event->type() == QEvent::KeyPress) {
-        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
-        if (keyEvent->key() == Qt::Key_Space && this->isVisible()) {
-            this->hide();
-            return true; // 事件已处理，不再传递
-        }
+    // 按下空格键退出
+    if (event->key() == Qt::Key_Space) {
+        this->hide();
     }
-    return QWidget::eventFilter(obj, event);
 }
