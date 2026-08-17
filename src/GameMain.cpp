@@ -2,6 +2,7 @@
 #include "../include/Creator.h"
 #include "../include/Attention.h"
 #include "../include/Menu.h"
+#include "../include/ContentWindow.h"
 #include "ui_gamemain.h"
 
 #include <QKeyEvent>

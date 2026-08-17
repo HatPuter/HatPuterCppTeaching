@@ -66,5 +66,7 @@ void ContentWindow::keyPressEvent(QKeyEvent *event)
 void ContentWindow::resizeEvent(QResizeEvent *event)
 {
     QWidget::resizeEvent(event);
-    this->setGeometry(this->rect());
+    if (parentWidget() != nullptr) {
+        setGeometry(parentWidget()->rect());
+    }
 }
