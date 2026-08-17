@@ -8,7 +8,7 @@ ContentWindow::ContentWindow(QWidget *parent)
     , ui(new Ui::ContentWindow)
 {
     ui->setupUi(this);
-    this->setFocusPolicy(Qt::StrongFocus); // 允许获得键盘焦点
+    //this->setFocusPolicy(Qt::StrongFocus); // 允许获得键盘焦点
 }
 
 ContentWindow::~ContentWindow()
@@ -19,11 +19,10 @@ ContentWindow::~ContentWindow()
 // 显示内容窗
 void ContentWindow::ShowContentWindow(QString title, QString content, QString category)
 {
-    this->setFocus(); // 获取焦点
-
     ui->Title->setText(title);
     ui->Content->setText(content);
 
+    this->setStyleSheet("QWidget#ContentWindow { background-color: rgba(255, 255, 255, 100); }");
     if (category == "Ordinary") {
         ui->Title->setStyleSheet("QLabel#Title { color: white; font-size: 42px; }");
     }
@@ -61,4 +60,11 @@ void ContentWindow::keyPressEvent(QKeyEvent *event)
     if (event->key() == Qt::Key_Space) {
         this->hide();
     }
+}
+
+// 调整大小事件
+void ContentWindow::resizeEvent(QResizeEvent *event)
+{
+    QWidget::resizeEvent(event);
+    this->setGeometry(this->rect());
 }

@@ -22,6 +22,7 @@ public:
 
 protected:
     void keyPressEvent(QKeyEvent *event) override; // 键盘事件
+    void resizeEvent(QResizeEvent *event) override; // 调整大小事件
 
 private:
     Ui::ContentWindow *ui;

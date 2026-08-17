@@ -48,11 +48,19 @@ void GameMain::keyPressEvent(QKeyEvent *event)
     if (event->key() == Qt::Key_F11) {
         if (this->isFullScreen() == false) {
             this->showFullScreen();
-        } 
+        }
         else {
             this->showNormal();
         }
         return;
+    }
+
+    // 子窗口继承
+    for (auto *child : findChildren<QWidget *>()) {
+        if (child->isVisible() && child != m_currentUI && child != this) {
+            QCoreApplication::sendEvent(child, event);
+            return;
+        }
     }
 
     if (m_currentUI != nullptr) {
