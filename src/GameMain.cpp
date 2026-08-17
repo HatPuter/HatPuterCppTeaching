@@ -2,6 +2,7 @@
 #include "../include/Creator.h"
 #include "../include/Attention.h"
 #include "../include/Menu.h"
+#include "../include/ContentWindow.h"
 #include "ui_gamemain.h"
 
 #include <QKeyEvent>
@@ -53,6 +54,14 @@ void GameMain::keyPressEvent(QKeyEvent *event)
             this->showNormal();
         }
         return;
+    }
+
+    // 优先转发给可见的 ContentWindow
+    for (auto *child : findChildren<ContentWindow *>()) {
+        if (child->isVisible()) {
+            QCoreApplication::sendEvent(child, event);
+            return;
+        }
     }
 
     if (m_currentUI != nullptr) {
