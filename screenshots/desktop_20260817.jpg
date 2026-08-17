@@ -1,0 +1,2 @@
+$(base64 /tmp/desktop_tiny.jpg | tr -d '
+')
