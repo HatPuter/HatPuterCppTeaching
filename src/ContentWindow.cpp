@@ -33,7 +33,17 @@ void ContentWindow::ShowContentWindow(QString title, QString content, QString ca
     else {
         ui->Title->setStyleSheet("QLabel#Title { color: red; font-size: 42px; }");
     }
-    ui->Content->setStyleSheet("QLabel#Content { color: white; font-size: 28px; }");
+    ui->Content->setStyleSheet(R"(
+        QTextBrowser#Content {
+            background-color: transparent;
+            border-color: white;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 6px;
+            color: white;
+            font-size: 24px;
+        }
+    )");
 
     // 铺满父窗口
     if (parentWidget() != nullptr) {

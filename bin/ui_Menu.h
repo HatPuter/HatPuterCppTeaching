@@ -130,6 +130,11 @@ public:
 
         Exit = new QLabel(Menu);
         Exit->setObjectName(QString::fromUtf8("Exit"));
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(Exit->sizePolicy().hasHeightForWidth());
+        Exit->setSizePolicy(sizePolicy);
         Exit->setFont(font);
         Exit->setStyleSheet(QString::fromUtf8("QLabel#Exit {\n"
 "    color: white;\n"
@@ -141,6 +146,8 @@ public:
 
         Settings = new QLabel(Menu);
         Settings->setObjectName(QString::fromUtf8("Settings"));
+        sizePolicy.setHeightForWidth(Settings->sizePolicy().hasHeightForWidth());
+        Settings->setSizePolicy(sizePolicy);
         Settings->setFont(font);
         Settings->setStyleSheet(QString::fromUtf8("QLabel#Settings {\n"
 "    color: white;\n"
@@ -164,6 +171,11 @@ public:
 
         SeparatorLine9 = new QLabel(Menu);
         SeparatorLine9->setObjectName(QString::fromUtf8("SeparatorLine9"));
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(SeparatorLine9->sizePolicy().hasHeightForWidth());
+        SeparatorLine9->setSizePolicy(sizePolicy1);
         SeparatorLine9->setFont(font);
         SeparatorLine9->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine9 {\n"
 "    color: transparent;\n"
@@ -179,11 +191,11 @@ public:
 
         SeparatorLine6 = new QLabel(Menu);
         SeparatorLine6->setObjectName(QString::fromUtf8("SeparatorLine6"));
-        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(SeparatorLine6->sizePolicy().hasHeightForWidth());
-        SeparatorLine6->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(SeparatorLine6->sizePolicy().hasHeightForWidth());
+        SeparatorLine6->setSizePolicy(sizePolicy2);
         SeparatorLine6->setFont(font);
         SeparatorLine6->setStyleSheet(QString::fromUtf8("QLabel#SeparatorLine6 {\n"
 "    color: transparent;\n"
@@ -233,11 +245,11 @@ public:
 
         BulletinsBoard = new QListView(Menu);
         BulletinsBoard->setObjectName(QString::fromUtf8("BulletinsBoard"));
-        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Expanding);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(BulletinsBoard->sizePolicy().hasHeightForWidth());
-        BulletinsBoard->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(BulletinsBoard->sizePolicy().hasHeightForWidth());
+        BulletinsBoard->setSizePolicy(sizePolicy3);
         BulletinsBoard->setMinimumSize(QSize(0, 0));
         BulletinsBoard->setMaximumSize(QSize(16777215, 16777215));
         BulletinsBoard->setFont(font);
