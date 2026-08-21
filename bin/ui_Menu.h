@@ -256,6 +256,7 @@ public:
         BulletinsBoard->setStyleSheet(QString::fromUtf8("QListView#BulletinsBoard {\n"
 "    background-color: rgba(255, 255, 255, 0);\n"
 "    font-size: 22px;\n"
+"    color: white;\n"
 "    border-color: white;\n"
 "    border-width: 2px;\n"
 "    border-style: solid;\n"
@@ -266,9 +267,11 @@ public:
 "}\n"
 "QListView#BulletinsBoard::item:hover {\n"
 "    background-color: rgba(152, 251, 152, 64);\n"
+"    color: white;\n"
 "}\n"
 "QListView#BulletinsBoard::item:selected {\n"
 "    background-color: rgba(152, 251, 152, 100);\n"
+"    color: white;\n"
 "}\n"
 ""));
         BulletinsBoard->setEditTriggers(QAbstractItemView::NoEditTriggers);

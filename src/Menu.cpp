@@ -1,6 +1,6 @@
 #include "../include/Menu.h"
 #include "../include/Animation.h"
-#include "../include/ContentWindow.h"
+#include "../include/Bulletins.h"
 #include "ui_Menu.h"
 
 #include <QEvent>
@@ -9,18 +9,14 @@
 Menu::Menu(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Menu)
+    , m_bulletins(new Bulletins(this))
     , m_menuOptions(MenuOptions::StartGame)
-    , m_ifSetBulletins(false)
 {
     ui->setupUi(this);
     ui->BulletinsBoard->setFocusPolicy(Qt::NoFocus);
     this->setAttribute(Qt::WA_StyledBackground, true);
 
-    // 内容窗
-    m_contentWindow = new ContentWindow(this);
-    m_contentWindow->hide();
-
-    Menu::ShowBulletins(ui->BulletinsBoard); // 显示公告
+    m_bulletins->ShowBulletins(ui->BulletinsBoard); // 显示公告
 
     Animation::RunAnimation(this, {
         Animation::FadeInOrOut(this, 0.0, 1.0, 500)
@@ -38,18 +34,11 @@ Menu::Menu(QWidget *parent)
     install(ui->Settings);
     install(ui->Exit);
 
-    Menu::DisplayOptions(); // 显示选项
+    Menu::ShowOptions(); // 显示选项
 }
 
 Menu::~Menu()
 {
     delete ui;
+    delete m_bulletins;
 }
-
-void Menu::on_BulletinsBoard_doubleClicked(const QModelIndex &index)
-{
-    if (m_ifSetBulletins == false) {
-        ui->BulletinsBoard->clearSelection(); // 取消列表选中状态
-    }
-}
-

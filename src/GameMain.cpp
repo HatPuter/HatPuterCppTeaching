@@ -2,7 +2,6 @@
 #include "../include/Creator.h"
 #include "../include/Attention.h"
 #include "../include/Menu.h"
-#include "../include/ContentWindow.h"
 #include "ui_gamemain.h"
 
 #include <QKeyEvent>
@@ -56,14 +55,6 @@ void GameMain::keyPressEvent(QKeyEvent *event)
         return;
     }
 
-    // 子窗口继承
-    for (auto *child : findChildren<QWidget *>()) {
-        if (child->isVisible() && child != m_currentUI && child != this) {
-            QCoreApplication::sendEvent(child, event);
-            return;
-        }
-    }
-
     if (m_currentUI != nullptr) {
         QCoreApplication::sendEvent(m_currentUI, event);
     }
@@ -81,7 +72,7 @@ void GameMain::SwitchToUI(QWidget *ui)
 void GameMain::resizeEvent(QResizeEvent *event)
 {
     QWidget::resizeEvent(event);
-    if (m_currentUI != nullptr) {
+    if (m_currentUI && m_currentUI->isVisible()) {
         m_currentUI->setGeometry(this->rect());
     }
 }

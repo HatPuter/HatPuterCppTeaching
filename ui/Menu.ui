@@ -390,6 +390,7 @@
       <string notr="true">QListView#BulletinsBoard {
     background-color: rgba(255, 255, 255, 0);
     font-size: 22px;
+    color: white;
     border-color: white;
     border-width: 2px;
     border-style: solid;
@@ -400,9 +401,11 @@ QListView#BulletinsBoard::item {
 }
 QListView#BulletinsBoard::item:hover {
     background-color: rgba(152, 251, 152, 64);
+    color: white;
 }
 QListView#BulletinsBoard::item:selected {
     background-color: rgba(152, 251, 152, 100);
+    color: white;
 }
 </string>
      </property>

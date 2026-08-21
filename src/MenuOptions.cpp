@@ -1,5 +1,4 @@
 #include "../include/Menu.h"
-#include "../include/ContentWindow.h"
 #include "ui_Menu.h"
 
 #include <QKeyEvent>
@@ -57,7 +56,7 @@ void Menu::keyPressEvent(QKeyEvent *event)
         }
     }
 
-    DisplayOptions();
+    ShowOptions();
 }
 
 // 事件过滤器
@@ -79,7 +78,7 @@ bool Menu::eventFilter(QObject* object, QEvent* event)
             m_menuOptions = MenuOptions::Exit;
         }
 
-        DisplayOptions();
+        ShowOptions();
     }
     // 点击
     if (event->type() == QEvent::MouseButtonRelease) {
@@ -103,7 +102,7 @@ bool Menu::eventFilter(QObject* object, QEvent* event)
 }
 
 // 显示选项
-void Menu::DisplayOptions()
+void Menu::ShowOptions()
 {
     switch (m_menuOptions) {
     case MenuOptions::StartGame:

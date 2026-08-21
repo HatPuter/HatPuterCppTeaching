@@ -46,10 +46,7 @@ public:
         QFont font;
         font.setFamily(QString::fromUtf8("Maple Mono NL CN"));
         ContentWindow->setFont(font);
-        ContentWindow->setStyleSheet(QString::fromUtf8("QWidget#ContentWindow {\n"
-"	background-color: rgba(255, 255, 255, 100);\n"
-"}\n"
-""));
+        ContentWindow->setStyleSheet(QString::fromUtf8(""));
         gridLayout = new QGridLayout(ContentWindow);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         SeparatorLine3 = new QLabel(ContentWindow);
