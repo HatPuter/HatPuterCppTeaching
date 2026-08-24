@@ -18,15 +18,15 @@ jobs:
         with:
           version: '5.15.2'
 
-      - name: Build (qmake)
-        run: |
-          qmake CONFIG+=release
-          make
+      - name: Build (Unix)
         if: runner.os != 'Windows'
-
-      - name: Build (qmake + mingw, Windows)
         run: |
-          qmake CONFIG+=release
-          mingw32-make
+          qmake HatPuterCppTeaching.pro CONFIG+=release
+          make
+
+      - name: Build (Windows / MinGW)
         if: runner.os == 'Windows'
-        
+        run: |
+          qmake HatPuterCppTeaching.pro CONFIG+=release
+          mingw32-make
+          

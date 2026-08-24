@@ -17,16 +17,6 @@ int main(int argc, char *argv[])
     qreal dpr = a.primaryScreen()->devicePixelRatio(); // 获取DPI缩放因子
     globalFont.setPointSizeF(9.0 * dpr);
 
-    QTranslator translator;
-    const QStringList uiLanguages = QLocale::system().uiLanguages();
-    for (const QString &locale : uiLanguages) {
-        const QString baseName = "HatPuterCppTeaching_" + QLocale(locale).name();
-        if (translator.load(":/i18n/" + baseName)) {
-            a.installTranslator(&translator);
-            break;
-        }
-    }
-
     GameMain w;
     w.show();
     return QApplication::exec();
