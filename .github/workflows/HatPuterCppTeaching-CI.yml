@@ -7,7 +7,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [ubuntu-latest, windows-latest, macos-13]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
@@ -33,10 +33,17 @@ jobs:
         with:
           version: '6.5.3'
 
-      - name: Build (Unix)
-        if: runner.os != 'Windows'
+      - name: Build (Linux)
+        if: runner.os == 'Linux'
         run: |
           qmake HatPuterCppTeaching.pro CONFIG+=release
+          make
+
+      - name: Build (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          qmake HatPuterCppTeaching.pro CONFIG+=release
+          sed -i '' 's/-framework AGL//g' Makefile
           make
 
       - name: Build (Windows / MinGW)
@@ -44,4 +51,4 @@ jobs:
         run: |
           qmake HatPuterCppTeaching.pro CONFIG+=release
           mingw32-make
-        
+          
