@@ -2,7 +2,7 @@
 #include "../include/Animation.h"
 #include "../include/Attention.h"
 #include "../include/GameMain.h"
-#include "ui_creator.h"
+#include "ui_Creator.h"
 
 #include <QPixmap>
 #include <QGraphicsEffect>
