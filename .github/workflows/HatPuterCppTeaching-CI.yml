@@ -24,9 +24,12 @@ jobs:
           qmake HatPuterCppTeaching.pro CONFIG+=release
           make
 
-      - name: Build (Windows / MinGW)
+      - name: Setup MSVC
+        if: runner.os == 'Windows'
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Build (Windows / MSVC)
         if: runner.os == 'Windows'
         run: |
           qmake HatPuterCppTeaching.pro CONFIG+=release
-          mingw32-make
-          
+          jom
