@@ -26,6 +26,8 @@ jobs:
           version: '5.15.2'
           arch: win64_mingw81
           tools: tools_mingw
+          aqtversion: '>=3.1.0'
+          cache: false
 
       - name: Install Qt (macOS)
         if: runner.os == 'macOS'
@@ -36,19 +38,25 @@ jobs:
       - name: Build (Linux)
         if: runner.os == 'Linux'
         run: |
-          qmake HatPuterCppTeaching.pro CONFIG+=release
+          mkdir -p bin
+          cd bin
+          qmake ../HatPuterCppTeaching.pro CONFIG+=release
           make
 
       - name: Build (macOS)
         if: runner.os == 'macOS'
         run: |
-          qmake HatPuterCppTeaching.pro CONFIG+=release
+          mkdir -p bin
+          cd bin
+          qmake ../HatPuterCppTeaching.pro CONFIG+=release
           sed -i '' 's/-framework AGL//g' Makefile
           make
 
       - name: Build (Windows / MinGW)
         if: runner.os == 'Windows'
         run: |
-          qmake HatPuterCppTeaching.pro CONFIG+=release
+          mkdir bin
+          cd bin
+          qmake ../HatPuterCppTeaching.pro CONFIG+=release
           mingw32-make
           
