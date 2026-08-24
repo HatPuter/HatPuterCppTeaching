@@ -4,3 +4,4 @@ bin/
 .git/
 
 # 忽略文件
+.gitignore
