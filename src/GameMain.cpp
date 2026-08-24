@@ -5,7 +5,6 @@
 #include "ui_GameMain.h"
 
 #include <QKeyEvent>
-#include <cstdlib>
 
 GameMain::GameMain(QWidget *parent)
     : QWidget(parent)
