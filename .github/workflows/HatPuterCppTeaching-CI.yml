@@ -13,10 +13,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Qt
+      - name: Install Qt (Linux)
+        if: runner.os == 'Linux'
         uses: jurplel/install-qt-action@v3
         with:
           version: '5.15.2'
+
+      - name: Install Qt (Windows / MinGW)
+        if: runner.os == 'Windows'
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: '5.15.2'
+          arch: win64_mingw81
+          tools: tools_mingw
+
+      - name: Install Qt (macOS)
+        if: runner.os == 'macOS'
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: '6.5.3'
 
       - name: Build (Unix)
         if: runner.os != 'Windows'
@@ -24,12 +39,9 @@ jobs:
           qmake HatPuterCppTeaching.pro CONFIG+=release
           make
 
-      - name: Setup MSVC
-        if: runner.os == 'Windows'
-        uses: ilammy/msvc-dev-cmd@v1
-
-      - name: Build (Windows / MSVC)
+      - name: Build (Windows / MinGW)
         if: runner.os == 'Windows'
         run: |
           qmake HatPuterCppTeaching.pro CONFIG+=release
-          jom
+          mingw32-make
+        
