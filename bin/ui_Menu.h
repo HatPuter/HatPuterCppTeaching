@@ -44,7 +44,7 @@ public:
     {
         if (Menu->objectName().isEmpty())
             Menu->setObjectName(QString::fromUtf8("Menu"));
-        Menu->resize(1280, 720);
+        Menu->resize(1344, 756);
         QFont font;
         font.setFamily(QString::fromUtf8("Maple Mono NL CN"));
         Menu->setFont(font);

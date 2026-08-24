@@ -31,7 +31,7 @@ public:
     {
         if (Creator->objectName().isEmpty())
             Creator->setObjectName(QString::fromUtf8("Creator"));
-        Creator->resize(1280, 720);
+        Creator->resize(1344, 756);
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);

@@ -25,7 +25,7 @@ public:
     {
         if (GameMain->objectName().isEmpty())
             GameMain->setObjectName(QString::fromUtf8("GameMain"));
-        GameMain->resize(1280, 720);
+        GameMain->resize(1344, 756);
         QFont font;
         font.setFamily(QString::fromUtf8("Maple Mono NL CN"));
         GameMain->setFont(font);

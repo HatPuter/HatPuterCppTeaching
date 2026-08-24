@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>720</height>
+    <width>1344</width>
+    <height>756</height>
    </rect>
   </property>
   <property name="font">
@@ -25,29 +25,14 @@
 </string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="1" column="0">
-    <widget class="QLabel" name="SeparatorLine1">
-     <property name="font">
-      <font>
-       <family>Maple Mono NL CN</family>
-       <pointsize>-1</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel#SeparatorLine1 {
-    color: transparent;
-	background-color: rgba(255, 255, 255, 0);
-    font-size: 9px;
-}
-</string>
-     </property>
-     <property name="text">
-      <string>分割线</string>
-     </property>
-    </widget>
-   </item>
    <item row="1" column="1">
-    <widget class="QLabel" name="Content">
+    <widget class="QLabel" name="Title">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
      <property name="font">
       <font>
        <family>Maple Mono NL CN</family>
@@ -55,21 +40,21 @@
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel#Content {
-    color: white;
-    font-size: 30px;
+      <string notr="true">QLabel#Title {
+    color: red;
+    font-size: 58px;
 }
 </string>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;1、本游戏包含[福瑞]元素， 对福瑞元素反感的人慎玩&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;2、………………&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>游戏前请阅读</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>
-   <item row="1" column="2">
+   <item row="0" column="2" rowspan="5">
     <widget class="QLabel" name="SeparatorLine2">
      <property name="font">
       <font>
@@ -86,35 +71,18 @@
 </string>
      </property>
      <property name="text">
-      <string>分割线</string>
+      <string>分割线分割线</string>
      </property>
     </widget>
    </item>
-   <item row="0" column="0" colspan="3">
-    <widget class="QLabel" name="Title">
-     <property name="font">
-      <font>
-       <family>Maple Mono NL CN</family>
-       <pointsize>-1</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel#Title {
-    color: red;
-    font-size: 64px;
-}
-</string>
-     </property>
-     <property name="text">
-      <string>游戏前请阅读</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="0" colspan="3">
+   <item row="3" column="1">
     <widget class="QLabel" name="Note">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
      <property name="font">
       <font>
        <family>Maple Mono NL CN</family>
@@ -124,7 +92,7 @@
      <property name="styleSheet">
       <string notr="true">QLabel#Note {
     color: gray;
-    font-size: 28px;
+    font-size: 24px;
 }
 </string>
      </property>
@@ -133,6 +101,72 @@
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" rowspan="5">
+    <widget class="QLabel" name="SeparatorLine1">
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#SeparatorLine1 {
+    color: transparent;
+	background-color: rgba(255, 255, 255, 0);
+    font-size: 9px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>分割线分割线</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLabel" name="Content">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>Maple Mono NL CN</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#Content {
+    color: white;
+    font-size: 26px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>一、元素：
+‎‎ㅤㅤ·本游戏包含furry元素，若有对此元素反感的用户，请谨慎游玩
+
+二、开源法则：
+ㅤㅤ·本游戏使用开源版Qt5.15.2开发，游戏完全开源且免费，允许二创，但要遵守开
+源法则
+
+三、身体警告：
+ㅤㅤ·本游戏含有光敏感信息，对此信息可能会产生生理问题的人谨慎游玩，如果因此
+产生生理问题，本游戏概不负责
+ㅤㅤ·请合理安排游玩时间，不要防沉迷</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
      </property>
     </widget>
    </item>

@@ -62,7 +62,7 @@ void Menu::keyPressEvent(QKeyEvent *event)
 // 事件过滤器
 bool Menu::eventFilter(QObject* object, QEvent* event)
 {
-    /// 菜单选项
+    /* 菜单选项 */
     // 触碰
     if (event->type() == QEvent::Enter) {
         if (object == ui->StartGame) {

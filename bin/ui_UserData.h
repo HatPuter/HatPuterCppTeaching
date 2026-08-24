@@ -23,7 +23,7 @@ public:
     {
         if (UserData->objectName().isEmpty())
             UserData->setObjectName(QString::fromUtf8("UserData"));
-        UserData->resize(1280, 720);
+        UserData->resize(1344, 756);
         QFont font;
         font.setFamily(QString::fromUtf8("Maple Mono NL CN"));
         UserData->setFont(font);
