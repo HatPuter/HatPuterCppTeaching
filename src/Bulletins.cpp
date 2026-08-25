@@ -43,10 +43,10 @@ void Bulletins::ShowBulletins(QListView *bulletinsBoard)
         // 获取公告失败
         if (networkReply->error() != QNetworkReply::NoError) {
             QStandardItemModel *model = new QStandardItemModel(m_bulletinsBoard);
-            model->appendRow(new QStandardItem("公告获取失败：" + networkReply->errorString()));
+            model->appendRow(new QStandardItem("公告获取失败: " + networkReply->errorString()));
             m_bulletinsBoard->setModel(model);
             networkReply->deleteLater();
-            
+
             return;
         }
 
