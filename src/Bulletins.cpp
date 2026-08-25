@@ -40,14 +40,13 @@ void Bulletins::ShowBulletins(QListView *bulletinsBoard)
     auto *networkReply = networkManager->get(networkRequest);
 
     QObject::connect(networkReply, &QNetworkReply::finished, this, [this, networkReply] {
-        // 网络获取失败
+        // 获取公告失败
         if (networkReply->error() != QNetworkReply::NoError) {
-            // 公告栏显示获取失败
             QStandardItemModel *model = new QStandardItemModel(m_bulletinsBoard);
-            model->appendRow(new QStandardItem("公告获取失败"));
-            m_bulletinsBoard->setModel(model); // 添加到公告栏
+            model->appendRow(new QStandardItem("公告获取失败：" + networkReply->errorString()));
+            m_bulletinsBoard->setModel(model);
             networkReply->deleteLater();
-
+            
             return;
         }
 
