@@ -1,16 +1,21 @@
 #include "../include/Bulletins.h"
 
 #include <QString>
+// 公告解析
 #include <QByteArray>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonParseError>
+// 获取公告
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QNetworkRequest>
+// 公告栏
+#include <QListView>
 #include <QStandardItemModel>
 #include <QStandardItem>
+#include <QStyledItemDelegate>
 
 Bulletins::Bulletins(QWidget *parent)
     : QWidget(parent)
@@ -24,6 +29,7 @@ Bulletins::~Bulletins()
     delete m_bulletinsBoard;
 }
 
+// 展示公告
 void Bulletins::ShowBulletins(QListView *bulletinsBoard)
 {
     // 设置全局变量
@@ -67,16 +73,27 @@ void Bulletins::ShowBulletins(QListView *bulletinsBoard)
 
         QStandardItemModel *titleModel = new QStandardItemModel(m_bulletinsBoard); // 标题
         for (int i = 0; i < bulletinsArray.size(); i++) {
+            // 获取当前项
             QJsonObject bulletinObject = bulletinsArray[i].toObject();
+            
+            QString bulletinTitle = bulletinObject["title"].toString(); // 标题
+            QString bulletinTime = bulletinObject["time"].toString(); // 时间
+            QString bulletinCategory = bulletinObject["category"].toString(); // 级别
 
-            // 标题
-            QString bulletinTitle = bulletinObject["title"].toString();
-
-            // 时间
-            QString bulletinTime = bulletinObject["time"].toString();
+            auto *item = new QStandardItem(bulletinTitle + "   " + bulletinTime);
+            item->setData(bulletinCategory, Qt::UserRole); // 保存选项级别
+            if (bulletinCategory == "Important") {
+                item->setForeground(QBrush(Qt::red));
+            }
+            else if (bulletinCategory == "Moderate") {
+                item->setForeground(QBrush(Qt::yellow));
+            }
+            else {
+                item->setForeground(QBrush(Qt::white));
+            }
 
             // 添加到列表
-            titleModel->appendRow(new QStandardItem(bulletinTitle + "   " + bulletinTime));
+            titleModel->appendRow(item);
         }
 
         m_bulletinsBoard->setModel(titleModel); // 添加到公告栏

@@ -51,6 +51,6 @@ jobs:
       - name: Build (Windows / MinGW)
         if: runner.os == 'Windows'
         run: |
-          qmake HatPuterCppTeaching.pro CONFIG+=release
+          4
           mingw32-make
           
