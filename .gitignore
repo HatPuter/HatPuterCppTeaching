@@ -1,7 +1,0 @@
-# 忽略路径
-bin/
-.qtcreator/
-.git/
-
-# 忽略文件
-.gitignore
