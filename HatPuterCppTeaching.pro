@@ -39,7 +39,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 # 软件生成路径
-DESTDIR = $$PWD/bin
+DESTDIR = $$PWD
 
 # 开启O3优化
 QMAKE_CXXFLAGS_RELEASE += -O3

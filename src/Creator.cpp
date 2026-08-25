@@ -14,7 +14,7 @@ Creator::Creator(QWidget *parent)
     ui->setupUi(this);
 
     // 制作者头像缩放
-    QPixmap creatorAvatar("../resources/CreatorAvatar.png");
+    QPixmap creatorAvatar("resources/CreatorAvatar.png");
     ui->CreatorAvatar->setPixmap(creatorAvatar.scaled(creatorAvatar.size() * 0.25, Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
     // 渐显渐隐
