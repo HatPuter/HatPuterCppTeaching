@@ -5,6 +5,7 @@
 
 #include <QEvent>
 #include <QMouseEvent>
+#include <QTimer>
 
 Menu::Menu(QWidget *parent)
     : QWidget(parent)
@@ -15,9 +16,6 @@ Menu::Menu(QWidget *parent)
     ui->setupUi(this);
     ui->BulletinsBoard->setFocusPolicy(Qt::NoFocus); // 禁止公告栏获取焦点
     this->setAttribute(Qt::WA_StyledBackground, true);
-
-    // 连接公告栏点击事件
-    connect(ui->BulletinsBoard, &QListView::pressed, this, &Menu::on_BulletinsBoard_clicked);
 
     m_bulletins->ShowBulletins(ui->BulletinsBoard); // 显示公告
 
@@ -43,20 +41,4 @@ Menu::Menu(QWidget *parent)
 Menu::~Menu()
 {
     delete ui;
-}
-
-// 公告选项被点击
-void Menu::on_BulletinsBoard_clicked(const QModelIndex &index)
-{
-    // 获取当前选项的文本色
-    const QBrush brush = index.data(Qt::ForegroundRole).value<QBrush>();
-
-    // 设置当前选项的文本色
-    QPalette palette = ui->BulletinsBoard->palette();
-
-    palette.setColor(QPalette::Active, QPalette::HighlightedText, brush.color());
-    palette.setColor(QPalette::Inactive, QPalette::HighlightedText, brush.color());
-
-    // 应用
-    ui->BulletinsBoard->setPalette(palette);
 }

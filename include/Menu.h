@@ -28,9 +28,6 @@ protected:
     void keyPressEvent(QKeyEvent *event) override; // 键盘事件
     bool eventFilter(QObject* object, QEvent* event) override; // 事件过滤器
 
-private slots:
-    void on_BulletinsBoard_clicked(const QModelIndex &index);
-
 private:
     Ui::Menu *ui;
     Bulletins *m_bulletins;

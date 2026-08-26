@@ -16,6 +16,9 @@
 #include <QStandardItemModel>
 #include <QStandardItem>
 #include <QStyledItemDelegate>
+// 绘制公告
+#include <QPainter>
+#include <QApplication>
 
 Bulletins::Bulletins(QWidget *parent)
     : QWidget(parent)
@@ -29,11 +32,78 @@ Bulletins::~Bulletins()
     delete m_bulletinsBoard;
 }
 
+// 绘制公告
+class DrawBulletins : public QStyledItemDelegate {
+public:
+    explicit DrawBulletins(QObject* parent = nullptr)
+        : QStyledItemDelegate(parent) {}
+
+    void paint(QPainter* painter, const QStyleOptionViewItem& styleOption, const QModelIndex& modelIndex) const override
+    {
+        // 初始化绘制
+        QStyleOptionViewItem viewItemOption = styleOption;
+        initStyleOption(&viewItemOption, modelIndex);
+
+        // 提取选项信息
+        QString bulletinTitle = modelIndex.data(Qt::DisplayRole).toString();
+        QString bulletinTime  = modelIndex.data(Qt::UserRole + 1).toString();
+        QString bulletinCategory = modelIndex.data(Qt::UserRole).toString();
+
+        // 绘制背景
+        QColor backGroundColor;
+        if (styleOption.state & QStyle::State_Selected) {
+            backGroundColor = QColor(152, 251, 152, 100);  // 你的 QSS selected 颜色
+        }
+        else if (styleOption.state & QStyle::State_MouseOver) {
+            backGroundColor = QColor(152, 251, 152, 64);   // 你的 QSS hover 颜色
+        }
+        else {
+            backGroundColor = Qt::transparent;
+        }
+        painter->fillRect(styleOption.rect, backGroundColor);
+
+        // 保存
+        painter->save();
+
+        // 根据级别设置文本色
+        if (bulletinCategory == "Important") {
+            painter->setPen(Qt::red);
+        }
+        else if (bulletinCategory == "Moderate") {
+            painter->setPen(Qt::yellow);
+        }
+        else {
+            painter->setPen(Qt::white);
+        }
+
+        // 绘制标题
+        painter->drawText(
+            viewItemOption.rect.adjusted(8, 0, -80, 0),
+            Qt::AlignVCenter | Qt::AlignLeft,
+            bulletinTitle
+        );
+
+        // 绘制时间
+        painter->setPen(Qt::gray);
+        painter->drawText(
+            viewItemOption.rect.adjusted(0, 0, -12, 0),
+            Qt::AlignVCenter | Qt::AlignRight,
+            bulletinTime
+        );
+
+        // 恢复
+        painter->restore();
+    }
+};
+
 // 展示公告
 void Bulletins::ShowBulletins(QListView *bulletinsBoard)
 {
     // 设置全局变量
     m_bulletinsBoard = bulletinsBoard;
+
+    // 设置绘制公告代理
+    m_bulletinsBoard->setItemDelegate(new DrawBulletins(m_bulletinsBoard));
 
     // 提示正在获取公告
     QStandardItemModel *model = new QStandardItemModel(m_bulletinsBoard);
@@ -80,8 +150,11 @@ void Bulletins::ShowBulletins(QListView *bulletinsBoard)
             QString bulletinTime = bulletinObject["time"].toString(); // 时间
             QString bulletinCategory = bulletinObject["category"].toString(); // 级别
 
-            auto *item = new QStandardItem(bulletinTitle + "   " + bulletinTime);
-            item->setData(bulletinCategory, Qt::UserRole); // 保存选项级别
+            // 存储信息
+            auto *item = new QStandardItem(bulletinTitle);
+            item->setData(bulletinTime, Qt::UserRole + 1);
+            item->setData(bulletinCategory, Qt::UserRole);
+
             if (bulletinCategory == "Important") {
                 item->setForeground(QBrush(Qt::red));
             }
