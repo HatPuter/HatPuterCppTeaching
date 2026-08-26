@@ -51,11 +51,13 @@ public:
 
         // 绘制背景
         QColor backGroundColor;
+        // 点击
         if (styleOption.state & QStyle::State_Selected) {
-            backGroundColor = QColor(152, 251, 152, 100);  // 你的 QSS selected 颜色
+            backGroundColor = QColor(152, 251, 152, 100);
         }
+        // 触碰
         else if (styleOption.state & QStyle::State_MouseOver) {
-            backGroundColor = QColor(152, 251, 152, 64);   // 你的 QSS hover 颜色
+            backGroundColor = QColor(152, 251, 152, 64);
         }
         else {
             backGroundColor = Qt::transparent;
